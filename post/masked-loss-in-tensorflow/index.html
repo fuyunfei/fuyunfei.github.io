@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>关于 | Queen&#39;s Road East</title>
+<title>Masked loss in tensorflow | Queen&#39;s Road East</title>
 <meta name="description" content="Queen&#39;s Road East">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -92,20 +92,46 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">关于</h2>
-            <div class="post-date">2019-01-25</div>
+            <h2 class="post-title">Masked loss in tensorflow</h2>
+            <div class="post-date">2019-09-30</div>
             
             <div class="post-content">
-              <blockquote>
-<p>欢迎来到我的小站呀，很高兴遇见你！🤝</p>
-</blockquote>
-<h2 id="关于本站">🏠 关于本站</h2>
-<h2 id="博主是谁">👨‍💻 博主是谁</h2>
-<h2 id="兴趣爱好">⛹ 兴趣爱好</h2>
-<h2 id="联系我呀">📬 联系我呀</h2>
+              <p>use tf.where to indicate the mask</p>
+<pre><code class="language-python">import numpy as np
+import tensorflow as tf
+
+'''
+ ' Huber loss.
+ ' https://jaromiru.com/2017/05/27/on-using-huber-loss-in-deep-q-learning/
+ ' https://en.wikipedia.org/wiki/Huber_loss
+'''
+def huber_loss(y_true, y_pred, clip_delta=1.0):
+  error = y_true - y_pred
+  cond  = tf.keras.backend.abs(error) &lt; clip_delta
+
+  squared_loss = 0.5 * tf.keras.backend.square(error)
+  linear_loss  = clip_delta * (tf.keras.backend.abs(error) - 0.5 * clip_delta)
+
+  return tf.where(cond, squared_loss, linear_loss)
+
+'''
+ ' Same as above but returns the mean loss.
+'''
+def huber_loss_mean(y_true, y_pred, clip_delta=1.0):
+  return tf.keras.backend.mean(huber_loss(y_true, y_pred, clip_delta))
+</code></pre>
 
             </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://fuyunfei.github.io/post/demo">
+                  <h3 class="post-title">
+                    Demo
+                  </h3>
+                </a>
+              </div>
             
 
             
