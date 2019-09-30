@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fuyunfei.github.io</id>
     <title>Queen&apos;s Road East</title>
-    <updated>2019-09-30T18:46:40.278Z</updated>
+    <updated>2019-09-30T18:53:17.793Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://fuyunfei.github.io"/>
     <link rel="self" href="https://fuyunfei.github.io/atom.xml"/>
@@ -75,20 +75,6 @@ def huber_loss(y_true, y_pred, clip_delta=1.0):
 def huber_loss_mean(y_true, y_pred, clip_delta=1.0):
   return tf.keras.backend.mean(huber_loss(y_true, y_pred, clip_delta))
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Demo]]></title>
-        <id>https://fuyunfei.github.io/post/demo</id>
-        <link href="https://fuyunfei.github.io/post/demo">
-        </link>
-        <updated>2019-09-27T05:58:01.000Z</updated>
-        <summary type="html"><![CDATA[<p>This is a demo for nothing</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>This is a demo for nothing</p>
-<!-- more -->
-<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1569689941443.jpg" alt=""></figure>
-<p>Nothing but a picture !</p>
 ]]></content>
     </entry>
 </feed>
