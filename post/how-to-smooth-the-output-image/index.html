@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>文章归档 | Queen&#39;s Road East</title>
+<title> Output image smoothness  | Queen&#39;s Road East</title>
 <meta name="description" content="Queen&#39;s Road East">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -91,50 +91,62 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
+          <div class="post-detail">
+            <h2 class="post-title"> Output image smoothness </h2>
+            <div class="post-date">2019-09-30</div>
+            
+            <div class="post-content">
+              <p>Total variation loss could be a solution which basically calculate the gradient of the tensor.</p>
+<!-- more -->
+<pre><code class="language-python">    def total_variation(self,x):
+        assert K.ndim(x) == 4
+        if K.image_data_format() == 'channels_first':
+            a = x[:, :, :-1, :- 1] - x[:, :, 1:, :-1]
+            b = x[:, :, :-1, :-1] - x[:, :, :-1, 1:]
+        else:
+            a = x[:, :-1, :-1, :] - x[:, 1:, :-1, :]
+            b = x[:, :-1, :-1, :] - x[:, :- 1, 1:, :]
+        return K.concatenate((a,b))
 
-          <h2 class="archives-title">文章归档</h2>
-          <div class="archives-container">
+    def total_variation_loss(self,x):
+        assert K.ndim(x) == 4
+        if K.image_data_format() == 'channels_first':
+            a = K.square(x[:, :, :-1, :- 1] - x[:, :, 1:, :-1])
+            b = K.square(x[:, :, :-1, :-1] - x[:, :, :-1, 1:])
+        else:
+            a = K.square(x[:, :-1, :-1, :] - x[:, 1:, :-1, :])
+            b = K.square( x[:, :-1, :-1, :] - x[:, :- 1, 1:, :])
+        return K.sum(K.pow(a + b, 1.25))
+</code></pre>
+
+            </div>
             
-              <h2 class="year" data-aos="fade-in" data-aos-delay="500">2019</h2>
-              
+              <div class="tag-container">
                 
-                  <article class="post">
-                    <a href="https://fuyunfei.github.io/post/how-to-smooth-the-output-image">
-                      <h2 class="post-title">
-                         Output image smoothness 
-                      </h2>
-                    </a>
-                  </article>
+                  <a href="https://fuyunfei.github.io/tag/4CHy0fyRq" class="tag">
+                    Deaplearning
+                  </a>
                 
-              
+                  <a href="https://fuyunfei.github.io/tag/sfAI9SISzN" class="tag">
+                    tricks
+                  </a>
                 
-                  <article class="post">
-                    <a href="https://fuyunfei.github.io/post/masked-loss-in-tensorflow">
-                      <h2 class="post-title">
-                        Masked loss in tensorflow
-                      </h2>
-                    </a>
-                  </article>
-                
-              
-                
-                  <article class="post">
-                    <a href="https://fuyunfei.github.io/post/demo">
-                      <h2 class="post-title">
-                        Demo
-                      </h2>
-                    </a>
-                  </article>
-                
-              
+              </div>
             
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://fuyunfei.github.io/post/masked-loss-in-tensorflow">
+                  <h3 class="post-title">
+                    Masked loss in tensorflow
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
           </div>
-
-          <div class="pagination-container">
-  
-  
-</div>
 
         </div>
       </div>
