@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Queen&#39;s Road East</title>
+<title>minimal_LSTM | Queen&#39;s Road East</title>
 <meta name="description" content="皇后大道西">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -97,75 +97,50 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://fuyunfei.github.io/post/minimal_lstm">
-                  <h2 class="post-title">minimal_LSTM</h2>
-                </a>
-                <div class="post-date">
-                  2019-10-16
-                </div>
-                <div class="post-abstract">
-                  <p>最简单的LSTM</p>
+          <div class="post-detail">
+            <h2 class="post-title">minimal_LSTM</h2>
+            <div class="post-date">2019-10-16</div>
+            
+            <div class="post-content">
+              <p>最简单的LSTM</p>
+<!-- more -->
+<p>import numpy as np</p>
+<p>from keras.models import Sequential<br>
+from keras.layers import Dense<br>
+from keras.layers import LSTM</p>
+<p>data = [[i for i in range(100)]]<br>
+data = np.array(data, dtype=float)<br>
+target = [[i for i in range(1,101)]]<br>
+target = np.array(target, dtype=float)</p>
+<p>data = data.reshape((1, 1, 100))<br>
+target = target.reshape((1, 1, 100))<br>
+x_test=[i for i in range(100,200)]<br>
+x_test=np.array(x_test).reshape((1,1,100));<br>
+y_test=[i for i in range(101,201)]<br>
+y_test=np.array(y_test).reshape(1,1,100)</p>
+<p>model = Sequential()<br>
+model.add(LSTM(100, input_shape=(1, 100),return_sequences=True))<br>
+model.add(Dense(100))<br>
+model.compile(loss='mean_absolute_error', optimizer='adam',metrics=['accuracy'])<br>
+model.fit(data, target, nb_epoch=100, batch_size=1, verbose=2,validation_data=(x_test, y_test))</p>
+<p>predict = model.predict(data)</p>
 
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
                 <a href="https://fuyunfei.github.io/post/gabor-loss">
-                  <h2 class="post-title">gabor loss</h2>
+                  <h3 class="post-title">
+                    gabor loss
+                  </h3>
                 </a>
-                <div class="post-date">
-                  2019-10-16
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
               </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://fuyunfei.github.io/post/how-to-smooth-the-output-image">
-                  <h2 class="post-title">Tensor Smoothness </h2>
-                </a>
-                <div class="post-date">
-                  2019-09-29
-                </div>
-                <div class="post-abstract">
-                  <p>Total variation loss could be a solution which basically calculate the gradient of the tensor.</p>
+            
 
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://fuyunfei.github.io/post/masked-loss-in-tensorflow">
-                  <h2 class="post-title">Masked Loss</h2>
-                </a>
-                <div class="post-date">
-                  2019-09-29
-                </div>
-                <div class="post-abstract">
-                  <p>use tf.where to indicate the mask</p>
+            
 
-                </div>
-              </div>
-              
-            </article>
-          
-
-          <div class="pagination-container">
-  
-  
-</div>
+          </div>
 
         </div>
       </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Queen&#39;s Road East</title>
+<title>gabor loss | Queen&#39;s Road East</title>
 <meta name="description" content="皇后大道西">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -97,75 +97,58 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://fuyunfei.github.io/post/minimal_lstm">
-                  <h2 class="post-title">minimal_LSTM</h2>
-                </a>
-                <div class="post-date">
-                  2019-10-16
-                </div>
-                <div class="post-abstract">
-                  <p>最简单的LSTM</p>
+          <div class="post-detail">
+            <h2 class="post-title">gabor loss</h2>
+            <div class="post-date">2019-10-16</div>
+            
+            <div class="post-content">
+              <p>使用preset的卷积核作为loss</p>
+<pre><code class="language-python">def gabor_kernel_weight(shape):
+    # cv2.getGaborKernel(ksize, sigma, theta, lambda, gamma, psi, ktype)
+    # ksize - size of gabor filter (n, n)
+    # sigma - standard deviation of the gaussian function
+    # theta - orientation of the normal to the parallel stripes
+    # lambda - wavelength of the sunusoidal factor
+    # gamma - spatial aspect ratio
+    # psi - phase offset
+    # ktype - type and range of values that each pixel in the gabor kernel can hold
+    g_kernels = [cv2.getGaborKernel((7, 7), 8.0, i*np.pi/16.0, 5.0, 0.5, 0, ktype=cv2.CV_32F) for i in range(16)]
+    g_kernels=np.stack(g_kernels, axis=-1) 
+    g_kernels=np.stack([g_kernels, g_kernels , g_kernels],axis=-2) 
+    assert g_kernels.shape == shape
+    return K.variable(g_kernels, dtype='float32')
 
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://fuyunfei.github.io/post/gabor-loss">
-                  <h2 class="post-title">gabor loss</h2>
-                </a>
-                <div class="post-date">
-                  2019-10-16
-                </div>
-                <div class="post-abstract">
-                  
-                </div>
-              </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
+def gabor_loss(y_true,y_pred):
+    gabor_kernel_weights= gabor_kernel_weight((7,7,3,16)) # 设置 kernel 的 为 7x7x3x16 的gabor filter 
+    # b = np.zeros((16,))        
+    # garborlayer = Conv2D(16,kernel_size=(7,7),weights=[gabor_kernel_weights,b]) 
+    # garborlayer(y_true)
+    garbor_true= K.conv2d(y_true,gabor_kernel_weights,padding='same')
+    garbor_pred= K.conv2d(y_pred,gabor_kernel_weights,padding='same')
+    # Conv2D(16,kernel_size=(7,7),weights=[gabor_kernel_weights,b])(y_true)
+    gabor_mse_loss=keras.losses.mean_squared_error(garbor_true,garbor_pred)
+    mae_loss =  keras.losses.mean_absolute_error(y_pred,y_true)
+    # print('gabor_loss%f  mae_loss%f '% gabor_mse_loss.eval(), mae_loss)
+    return mae_loss+0.1*gabor_mse_loss
+    ``` 
+</code></pre>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
                 <a href="https://fuyunfei.github.io/post/how-to-smooth-the-output-image">
-                  <h2 class="post-title">Tensor Smoothness </h2>
+                  <h3 class="post-title">
+                    Tensor Smoothness 
+                  </h3>
                 </a>
-                <div class="post-date">
-                  2019-09-29
-                </div>
-                <div class="post-abstract">
-                  <p>Total variation loss could be a solution which basically calculate the gradient of the tensor.</p>
-
-                </div>
               </div>
-              
-            </article>
-          
-            <article class="post-item">
-              <div class="left">
-                <a href="https://fuyunfei.github.io/post/masked-loss-in-tensorflow">
-                  <h2 class="post-title">Masked Loss</h2>
-                </a>
-                <div class="post-date">
-                  2019-09-29
-                </div>
-                <div class="post-abstract">
-                  <p>use tf.where to indicate the mask</p>
+            
 
-                </div>
-              </div>
-              
-            </article>
-          
+            
 
-          <div class="pagination-container">
-  
-  
-</div>
+          </div>
 
         </div>
       </div>
