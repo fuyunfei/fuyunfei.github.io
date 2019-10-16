@@ -9,7 +9,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://fuyunfei.github.io/favicon.ico?v=1571251133547">
+<link rel="shortcut icon" href="https://fuyunfei.github.io/favicon.ico?v=1571251899947">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://fuyunfei.github.io/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://fuyunfei.github.io">
-        <img src="https://fuyunfei.github.io/images/avatar.png?v=1571251133547" class="site-logo">
+        <img src="https://fuyunfei.github.io/images/avatar.png?v=1571251899947" class="site-logo">
         <h1 class="site-title">Queen&#39;s Road East</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -102,28 +102,37 @@
             <div class="post-date">2019-10-16</div>
             
             <div class="post-content">
-              <p>最简单的LSTM</p>
+              <p>最简单的LSTM<br>
+<img src="https://fuyunfei.github.io/post-images/1571251885483.png" alt=""></p>
 <!-- more -->
-<p>import numpy as np</p>
-<p>from keras.models import Sequential<br>
-from keras.layers import Dense<br>
-from keras.layers import LSTM</p>
-<p>data = [[i for i in range(100)]]<br>
-data = np.array(data, dtype=float)<br>
-target = [[i for i in range(1,101)]]<br>
-target = np.array(target, dtype=float)</p>
-<p>data = data.reshape((1, 1, 100))<br>
-target = target.reshape((1, 1, 100))<br>
-x_test=[i for i in range(100,200)]<br>
-x_test=np.array(x_test).reshape((1,1,100));<br>
-y_test=[i for i in range(101,201)]<br>
-y_test=np.array(y_test).reshape(1,1,100)</p>
-<p>model = Sequential()<br>
-model.add(LSTM(100, input_shape=(1, 100),return_sequences=True))<br>
-model.add(Dense(100))<br>
-model.compile(loss='mean_absolute_error', optimizer='adam',metrics=['accuracy'])<br>
-model.fit(data, target, nb_epoch=100, batch_size=1, verbose=2,validation_data=(x_test, y_test))</p>
-<p>predict = model.predict(data)</p>
+<pre><code class="language-python">import numpy as np
+
+from keras.models import Sequential
+from keras.layers import Dense
+from keras.layers import LSTM
+
+
+data = [[i for i in range(100)]]
+data = np.array(data, dtype=float)
+target = [[i for i in range(1,101)]]
+target = np.array(target, dtype=float)
+
+data = data.reshape((1, 1, 100)) 
+target = target.reshape((1, 1, 100)) 
+x_test=[i for i in range(100,200)]
+x_test=np.array(x_test).reshape((1,1,100));
+y_test=[i for i in range(101,201)]
+y_test=np.array(y_test).reshape(1,1,100)
+
+
+model = Sequential()  
+model.add(LSTM(100, input_shape=(1, 100),return_sequences=True))
+model.add(Dense(100))
+model.compile(loss='mean_absolute_error', optimizer='adam',metrics=['accuracy'])
+model.fit(data, target, nb_epoch=100, batch_size=1, verbose=2,validation_data=(x_test, y_test))
+
+predict = model.predict(data)
+</code></pre>
 
             </div>
             
