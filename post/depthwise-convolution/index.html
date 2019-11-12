@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Tensor Smoothness  | 皇后大道中</title>
+<title>Depthwise Convolution | 皇后大道中</title>
 <meta name="description" content="皇后大道西">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -98,53 +98,27 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Tensor Smoothness </h2>
-            <div class="post-date">2019-09-29</div>
+            <h2 class="post-title">Depthwise Convolution</h2>
+            <div class="post-date">2019-11-12</div>
             
             <div class="post-content">
-              <p>Total variation loss could be a solution which basically calculate the gradient of the tensor.</p>
+              <p>Comparing Normal Convolution to Depthwise Convolution</p>
 <!-- more -->
-<pre><code class="language-python">    def total_variation(self,x):
-        assert K.ndim(x) == 4
-        if K.image_data_format() == 'channels_first':
-            a = x[:, :, :-1, :- 1] - x[:, :, 1:, :-1]
-            b = x[:, :, :-1, :-1] - x[:, :, :-1, 1:]
-        else:
-            a = x[:, :-1, :-1, :] - x[:, 1:, :-1, :]
-            b = x[:, :-1, :-1, :] - x[:, :- 1, 1:, :]
-        return K.concatenate((a,b))
-
-    def total_variation_loss(self,x):
-        assert K.ndim(x) == 4
-        if K.image_data_format() == 'channels_first':
-            a = K.square(x[:, :, :-1, :- 1] - x[:, :, 1:, :-1])
-            b = K.square(x[:, :, :-1, :-1] - x[:, :, :-1, 1:])
-        else:
-            a = K.square(x[:, :-1, :-1, :] - x[:, 1:, :-1, :])
-            b = K.square( x[:, :-1, :-1, :] - x[:, :- 1, 1:, :])
-        return K.sum(K.pow(a + b, 1.25))
-</code></pre>
+<h2 id="normal-convolution"><strong>Normal Convolution</strong></h2>
+<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1573588680034.png" alt=""></figure>
+<h2 id="depthwise-convolution"><strong>Depthwise Convolution</strong></h2>
+<figure data-type="image" tabindex="2"><img src="https://fuyunfei.github.io/post-images/1573588686254.png" alt=""></figure>
+<h2 id="depthwise-seperatable-convolution"><strong>Depthwise Seperatable Convolution</strong></h2>
+<figure data-type="image" tabindex="3"><img src="https://fuyunfei.github.io/post-images/1573588698538.png" alt=""></figure>
 
             </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://fuyunfei.github.io/tag/4CHy0fyRq" class="tag">
-                    Deaplearning
-                  </a>
-                
-                  <a href="https://fuyunfei.github.io/tag/sfAI9SISzN" class="tag">
-                    tricks
-                  </a>
-                
-              </div>
             
             
               <div class="next-post">
                 <div class="next">下一篇</div>
-                <a href="https://fuyunfei.github.io/post/masked-loss-in-tensorflow">
+                <a href="https://fuyunfei.github.io/post/rl-zong-jie">
                   <h3 class="post-title">
-                    Masked Loss
+                    RL 总结
                   </h3>
                 </a>
               </div>
