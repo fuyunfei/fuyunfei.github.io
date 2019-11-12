@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fuyunfei.github.io</id>
     <title>皇后大道中</title>
-    <updated>2019-11-12T20:02:45.088Z</updated>
+    <updated>2019-11-12T20:04:10.061Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://fuyunfei.github.io"/>
     <link rel="self" href="https://fuyunfei.github.io/atom.xml"/>
@@ -15,15 +15,17 @@
         <id>https://fuyunfei.github.io/post/depthwise-convolution</id>
         <link href="https://fuyunfei.github.io/post/depthwise-convolution">
         </link>
-        <updated>2019-11-12T11:56:08.000Z</updated>
+        <updated>2019-11-12T03:56:08.000Z</updated>
         <summary type="html"><![CDATA[<p>Comparing Normal Convolution to Depthwise Convolution</p>
+<h2 id="depthwise-convolution"><strong>Depthwise Convolution</strong></h2>
+<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1573588686254.png" alt=""></figure>
 ]]></summary>
         <content type="html"><![CDATA[<p>Comparing Normal Convolution to Depthwise Convolution</p>
+<h2 id="depthwise-convolution"><strong>Depthwise Convolution</strong></h2>
+<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1573588686254.png" alt=""></figure>
 <!-- more -->
 <h2 id="normal-convolution"><strong>Normal Convolution</strong></h2>
-<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1573588680034.png" alt=""></figure>
-<h2 id="depthwise-convolution"><strong>Depthwise Convolution</strong></h2>
-<figure data-type="image" tabindex="2"><img src="https://fuyunfei.github.io/post-images/1573588686254.png" alt=""></figure>
+<figure data-type="image" tabindex="2"><img src="https://fuyunfei.github.io/post-images/1573588680034.png" alt=""></figure>
 <h2 id="depthwise-seperatable-convolution"><strong>Depthwise Seperatable Convolution</strong></h2>
 <figure data-type="image" tabindex="3"><img src="https://fuyunfei.github.io/post-images/1573588698538.png" alt=""></figure>
 ]]></content>
