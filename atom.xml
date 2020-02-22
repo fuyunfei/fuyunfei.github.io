@@ -2,38 +2,38 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fuyunfei.github.io</id>
     <title>皇后大道中</title>
-    <updated>2019-11-12T20:06:33.432Z</updated>
+    <updated>2020-02-22T03:34:34.515Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://fuyunfei.github.io"/>
     <link rel="self" href="https://fuyunfei.github.io/atom.xml"/>
     <subtitle>皇后大道西</subtitle>
     <logo>https://fuyunfei.github.io/images/avatar.png</logo>
     <icon>https://fuyunfei.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2019, 皇后大道中</rights>
+    <rights>All rights reserved 2020, 皇后大道中</rights>
     <entry>
         <title type="html"><![CDATA[Depthwise Convolution]]></title>
-        <id>https://fuyunfei.github.io/post/depthwise-convolution</id>
-        <link href="https://fuyunfei.github.io/post/depthwise-convolution">
+        <id>https://fuyunfei.github.io/post/depthwise-convolution/</id>
+        <link href="https://fuyunfei.github.io/post/depthwise-convolution/">
         </link>
         <updated>2019-11-11T03:56:08.000Z</updated>
         <summary type="html"><![CDATA[<!-- Comparing Normal Convolution to Depthwise Convolution -->
 <h2 id="normal-convolution"><strong>Normal Convolution</strong></h2>
-<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1573588680034.png" alt="" width="400"></figure>
+<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1573588680034.png" alt="" width="400" loading="lazy"></figure>
 ]]></summary>
         <content type="html"><![CDATA[<!-- Comparing Normal Convolution to Depthwise Convolution -->
 <h2 id="normal-convolution"><strong>Normal Convolution</strong></h2>
-<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1573588680034.png" alt="" width="400"></figure>
+<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1573588680034.png" alt="" width="400" loading="lazy"></figure>
 <!-- more -->
 <h2 id="depthwise-convolution"><strong>Depthwise Convolution</strong></h2>
-<figure data-type="image" tabindex="2"><img src="https://fuyunfei.github.io/post-images/1573588686254.png" alt="" width="600"></figure>
+<figure data-type="image" tabindex="2"><img src="https://fuyunfei.github.io/post-images/1573588686254.png" alt="" width="600" loading="lazy"></figure>
 <h2 id="depthwise-seperatable-convolution"><strong>Depthwise Seperatable Convolution</strong></h2>
-<figure data-type="image" tabindex="3"><img src="https://fuyunfei.github.io/post-images/1573588698538.png" alt="" width="600"></figure>
+<figure data-type="image" tabindex="3"><img src="https://fuyunfei.github.io/post-images/1573588698538.png" alt="" width="600" loading="lazy"></figure>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[RL 总结]]></title>
-        <id>https://fuyunfei.github.io/post/rl-zong-jie</id>
-        <link href="https://fuyunfei.github.io/post/rl-zong-jie">
+        <id>https://fuyunfei.github.io/post/rl-zong-jie/</id>
+        <link href="https://fuyunfei.github.io/post/rl-zong-jie/">
         </link>
         <updated>2019-10-30T12:30:50.000Z</updated>
         <content type="html"><![CDATA[<p>Q Learning :</p>
@@ -43,8 +43,8 @@
     </entry>
     <entry>
         <title type="html"><![CDATA[Gabor Loss]]></title>
-        <id>https://fuyunfei.github.io/post/gabor-loss</id>
-        <link href="https://fuyunfei.github.io/post/gabor-loss">
+        <id>https://fuyunfei.github.io/post/gabor-loss/</id>
+        <link href="https://fuyunfei.github.io/post/gabor-loss/">
         </link>
         <updated>2019-10-15T07:29:47.000Z</updated>
         <summary type="html"><![CDATA[<p>如何使用preset的卷积核作为loss</p>
@@ -84,15 +84,15 @@ def gabor_loss(y_true,y_pred):
     </entry>
     <entry>
         <title type="html"><![CDATA[Minimal LSTM]]></title>
-        <id>https://fuyunfei.github.io/post/minimal_lstm</id>
-        <link href="https://fuyunfei.github.io/post/minimal_lstm">
+        <id>https://fuyunfei.github.io/post/minimal_lstm/</id>
+        <link href="https://fuyunfei.github.io/post/minimal_lstm/">
         </link>
         <updated>2019-10-13T13:38:10.000Z</updated>
         <summary type="html"><![CDATA[<p>LSTM with minimum code</p>
-<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1571252138234.png" alt="" width="600"></figure>
+<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1571252138234.png" alt="" width="600" loading="lazy"></figure>
 ]]></summary>
         <content type="html"><![CDATA[<p>LSTM with minimum code</p>
-<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1571252138234.png" alt="" width="600"></figure>
+<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1571252138234.png" alt="" width="600" loading="lazy"></figure>
 <!-- more -->
 <pre><code class="language-python">import numpy as np
 
@@ -127,8 +127,8 @@ predict = model.predict(data)
     </entry>
     <entry>
         <title type="html"><![CDATA[Tensor Smoothness ]]></title>
-        <id>https://fuyunfei.github.io/post/how-to-smooth-the-output-image</id>
-        <link href="https://fuyunfei.github.io/post/how-to-smooth-the-output-image">
+        <id>https://fuyunfei.github.io/post/how-to-smooth-the-output-image/</id>
+        <link href="https://fuyunfei.github.io/post/how-to-smooth-the-output-image/">
         </link>
         <updated>2019-09-29T21:36:48.000Z</updated>
         <summary type="html"><![CDATA[<p>Total variation loss could be a solution which basically calculate the gradient of the tensor.</p>
@@ -159,8 +159,8 @@ predict = model.predict(data)
     </entry>
     <entry>
         <title type="html"><![CDATA[Masked Loss]]></title>
-        <id>https://fuyunfei.github.io/post/masked-loss-in-tensorflow</id>
-        <link href="https://fuyunfei.github.io/post/masked-loss-in-tensorflow">
+        <id>https://fuyunfei.github.io/post/masked-loss-in-tensorflow/</id>
+        <link href="https://fuyunfei.github.io/post/masked-loss-in-tensorflow/">
         </link>
         <updated>2019-09-29T07:24:17.000Z</updated>
         <summary type="html"><![CDATA[<p>use tf.where to indicate the mask</p>
