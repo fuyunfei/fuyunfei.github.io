@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fuyunfei.github.io</id>
     <title>皇后大道中</title>
-    <updated>2020-02-22T03:34:34.515Z</updated>
+    <updated>2020-05-01T03:19:27.163Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://fuyunfei.github.io"/>
     <link rel="self" href="https://fuyunfei.github.io/atom.xml"/>
@@ -10,6 +10,62 @@
     <logo>https://fuyunfei.github.io/images/avatar.png</logo>
     <icon>https://fuyunfei.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 皇后大道中</rights>
+    <entry>
+        <title type="html"><![CDATA[Business Plan]]></title>
+        <id>https://fuyunfei.github.io/post/business-plan/</id>
+        <link href="https://fuyunfei.github.io/post/business-plan/">
+        </link>
+        <updated>2020-05-01T03:18:43.000Z</updated>
+        <content type="html"><![CDATA[<p>制作BP（Business Plan）<br>
+- 对于拉融资来说BP起到了至关重要的作用<br>
+- 很多人不写BP或是有许多人常写却写不好<br>
+- 公司也好个人也罢都应该把BP认真准备好<br>
+- 学习制作BP可以锻炼商业理解与整理思路<br>
+- BP起到的作用不限于融资也可以寻求合伙</p>
+<p>BP的格式建议：<br>
+- 正常情况下选择PPT（幻灯片）或PDF作为制作格式<br>
+- BP没有标准格式<br>
+- 李自然通常使用Keynote制作然后导出PDF格式<br>
+- 文件大小压缩至2M<br>
+- 内容字体要大，要在手机上进行效果预览的检查<br>
+- BP的长度尽可能控制在20页以内<br>
+- 配合的演讲时长控制在30分钟以内</p>
+<p>核心建议：<br>
+1.团队，操盘项目的是一群怎么样的人？<br>
+2.内容，项目是在做什么？解决了什么市场需求？<br>
+3.规模，项目的市场规模到底有多大？<br>
+4.商业模式，这个项目如何赚钱？收入构成与收入预测<br>
+5.核心优势，核心的优势在什么地方？<br>
+6.关键数据，多维度的关键数据<br>
+7.竞争对手，项目与主要竞争对手的关系<br>
+8.财务状况，支出与未来的财务规划<br>
+9.路线图，过去做了什么、现在要做什么、未来要做什么，时间节点如何规划？<br>
+10.融资，准备融资规模、估值、股权结构</p>
+<p>常规建议<br>
+1.BP必须是创始人制作并且可以进行演讲<br>
+2.准备好30分钟的逐字稿+练好口活<br>
+3.准备好各个时长的版本包括15min、5min，各版本内容的调整<br>
+4.多练习，有条件的可以寻求有经验的朋友进行帮助练习</p>
+<p>常犯错误<br>
+- BP并非详细的商业计划，最大作用是勾起投资人对项目的兴趣<br>
+- 内容不用面面俱到，有理有据即可<br>
+- 不用担心内容以偏概全，没说清楚<br>
+- BP仅作为敲门砖，真正的谈判还是面对面的线下<br>
+- BP的字不用太多，演讲不要照稿念<br>
+- 套话不要多，话术尽可能简洁明了，说人话</p>
+<p>内容重点：<br>
+- 突出增长<br>
+- 投资上高增长项目最抢手也更吸引人，合作上突出增长代表更有未来，寻求合作也会变的轻松<br>
+- 关键的增长数据，尽可能阐述过程而非直接给出一个数值，有条件可以制作成可视化的图片<br>
+- 突出盈利<br>
+- 大环境越好越突出增长，大环境越差尽可能突出盈利<br>
+- 团队的执行能力，一切的投资都是投人<br>
+- 突出CEO的能力<br>
+- 为什么你们的团队是最适合团队，展示过往资历与特质<br>
+- 团队做了什么？进行了哪些调整？</p>
+<p>98</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Depthwise Convolution]]></title>
         <id>https://fuyunfei.github.io/post/depthwise-convolution/</id>
