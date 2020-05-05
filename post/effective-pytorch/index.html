@@ -1,22 +1,108 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://fuyunfei.github.io</id>
-    <title>皇后大道中</title>
-    <updated>2020-05-05T03:31:10.380Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://fuyunfei.github.io"/>
-    <link rel="self" href="https://fuyunfei.github.io/atom.xml"/>
-    <subtitle>皇后大道西</subtitle>
-    <logo>https://fuyunfei.github.io/images/avatar.png</logo>
-    <icon>https://fuyunfei.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 皇后大道中</rights>
-    <entry>
-        <title type="html"><![CDATA[Effective PyTorch]]></title>
-        <id>https://fuyunfei.github.io/post/effective-pytorch/</id>
-        <link href="https://fuyunfei.github.io/post/effective-pytorch/">
-        </link>
-        <updated>2020-05-05T03:26:59.000Z</updated>
-        <content type="html"><![CDATA[<p>CC@https://github.com/vahidk/EffectivePyTorch</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Effective PyTorch | 皇后大道中</title>
+<meta name="description" content="皇后大道西">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://fuyunfei.github.io/favicon.ico?v=1588649316949">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://fuyunfei.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://fuyunfei.github.io">
+        <img src="https://fuyunfei.github.io/images/avatar.png?v=1588649316949" class="site-logo">
+        <h1 class="site-title">皇后大道中</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+        
+          <a href="/art" class="site-nav">
+            画架
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      皇后大道西
+    </div>
+    <div class="site-footer">
+       | <a class="rss" href="https://fuyunfei.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Effective PyTorch</h2>
+            <div class="post-date">2020-05-05</div>
+            
+            <div class="post-content">
+              <p>CC@https://github.com/vahidk/EffectivePyTorch</p>
 <h1 id="table-of-contents">Table of Contents</h1>
 <h2 id="part-i-pytorch-fundamentals">Part I: PyTorch Fundamentals</h2>
 <ol>
@@ -515,243 +601,47 @@ g = torch.autograd.grad(xe, logits)[0]
 print(g.numpy())  # prints [0.5, -0.5]
 </code></pre>
 <p>Let me remind again that extra care must be taken when doing gradient descent to make sure that the range of your functions as well as the gradients for each layer are within a valid range. Exponential and logarithmic functions when used naively are especially problematic because they can map small numbers to enormous ones and the other way around.</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Business Plan]]></title>
-        <id>https://fuyunfei.github.io/post/business-plan/</id>
-        <link href="https://fuyunfei.github.io/post/business-plan/">
-        </link>
-        <updated>2020-05-01T03:18:43.000Z</updated>
-        <content type="html"><![CDATA[<p>制作BP（Business Plan）<br>
-- 对于拉融资来说BP起到了至关重要的作用<br>
-- 很多人不写BP或是有许多人常写却写不好<br>
-- 公司也好个人也罢都应该把BP认真准备好<br>
-- 学习制作BP可以锻炼商业理解与整理思路<br>
-- BP起到的作用不限于融资也可以寻求合伙</p>
-<p>BP的格式建议：<br>
-- 正常情况下选择PPT（幻灯片）或PDF作为制作格式<br>
-- BP没有标准格式<br>
-- 李自然通常使用Keynote制作然后导出PDF格式<br>
-- 文件大小压缩至2M<br>
-- 内容字体要大，要在手机上进行效果预览的检查<br>
-- BP的长度尽可能控制在20页以内<br>
-- 配合的演讲时长控制在30分钟以内</p>
-<p>核心建议：<br>
-1.团队，操盘项目的是一群怎么样的人？<br>
-2.内容，项目是在做什么？解决了什么市场需求？<br>
-3.规模，项目的市场规模到底有多大？<br>
-4.商业模式，这个项目如何赚钱？收入构成与收入预测<br>
-5.核心优势，核心的优势在什么地方？<br>
-6.关键数据，多维度的关键数据<br>
-7.竞争对手，项目与主要竞争对手的关系<br>
-8.财务状况，支出与未来的财务规划<br>
-9.路线图，过去做了什么、现在要做什么、未来要做什么，时间节点如何规划？<br>
-10.融资，准备融资规模、估值、股权结构</p>
-<p>常规建议<br>
-1.BP必须是创始人制作并且可以进行演讲<br>
-2.准备好30分钟的逐字稿+练好口活<br>
-3.准备好各个时长的版本包括15min、5min，各版本内容的调整<br>
-4.多练习，有条件的可以寻求有经验的朋友进行帮助练习</p>
-<p>常犯错误<br>
-- BP并非详细的商业计划，最大作用是勾起投资人对项目的兴趣<br>
-- 内容不用面面俱到，有理有据即可<br>
-- 不用担心内容以偏概全，没说清楚<br>
-- BP仅作为敲门砖，真正的谈判还是面对面的线下<br>
-- BP的字不用太多，演讲不要照稿念<br>
-- 套话不要多，话术尽可能简洁明了，说人话</p>
-<p>内容重点：<br>
-- 突出增长<br>
-- 投资上高增长项目最抢手也更吸引人，合作上突出增长代表更有未来，寻求合作也会变的轻松<br>
-- 关键的增长数据，尽可能阐述过程而非直接给出一个数值，有条件可以制作成可视化的图片<br>
-- 突出盈利<br>
-- 大环境越好越突出增长，大环境越差尽可能突出盈利<br>
-- 团队的执行能力，一切的投资都是投人<br>
-- 突出CEO的能力<br>
-- 为什么你们的团队是最适合团队，展示过往资历与特质<br>
-- 团队做了什么？进行了哪些调整？</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Depthwise Convolution]]></title>
-        <id>https://fuyunfei.github.io/post/depthwise-convolution/</id>
-        <link href="https://fuyunfei.github.io/post/depthwise-convolution/">
-        </link>
-        <updated>2019-11-11T03:56:08.000Z</updated>
-        <summary type="html"><![CDATA[<!-- Comparing Normal Convolution to Depthwise Convolution -->
-<h2 id="normal-convolution"><strong>Normal Convolution</strong></h2>
-<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1573588680034.png" alt="" width="400" loading="lazy"></figure>
-]]></summary>
-        <content type="html"><![CDATA[<!-- Comparing Normal Convolution to Depthwise Convolution -->
-<h2 id="normal-convolution"><strong>Normal Convolution</strong></h2>
-<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1573588680034.png" alt="" width="400" loading="lazy"></figure>
-<!-- more -->
-<h2 id="depthwise-convolution"><strong>Depthwise Convolution</strong></h2>
-<figure data-type="image" tabindex="2"><img src="https://fuyunfei.github.io/post-images/1573588686254.png" alt="" width="600" loading="lazy"></figure>
-<h2 id="depthwise-seperatable-convolution"><strong>Depthwise Seperatable Convolution</strong></h2>
-<figure data-type="image" tabindex="3"><img src="https://fuyunfei.github.io/post-images/1573588698538.png" alt="" width="600" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RL 总结]]></title>
-        <id>https://fuyunfei.github.io/post/rl-zong-jie/</id>
-        <link href="https://fuyunfei.github.io/post/rl-zong-jie/">
-        </link>
-        <updated>2019-10-30T12:30:50.000Z</updated>
-        <content type="html"><![CDATA[<p>Q Learning :</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Q</mi><mo>(</mo><mstyle mathsize="0.9em"><mi>s</mi><mi>t</mi><mi>a</mi><mi>t</mi><mi>e</mi></mstyle><mo separator="true">,</mo><mstyle mathsize="0.9em"><mi>a</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi></mstyle><mo>)</mo><mo>←</mo><mo>(</mo><mn>1</mn><mo>−</mo><mi>α</mi><mo>)</mo><mi>Q</mi><mo>(</mo><mstyle mathsize="0.9em"><mi>s</mi><mi>t</mi><mi>a</mi><mi>t</mi><mi>e</mi></mstyle><mo separator="true">,</mo><mstyle mathsize="0.9em"><mi>a</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi></mstyle><mo>)</mo><mo>+</mo><mi>α</mi><mo fence="false">(</mo><mstyle mathsize="0.9em"><mi>r</mi><mi>e</mi><mi>w</mi><mi>a</mi><mi>r</mi><mi>d</mi></mstyle><mo>+</mo><mi>γ</mi><munder><mi>max</mi><mo>⁡</mo><mi>a</mi></munder><mi>Q</mi><mo>(</mo><mstyle mathsize="0.9em"><mi>n</mi><mi>e</mi><mi>x</mi><mi>t</mi><mtext> </mtext><mi>s</mi><mi>t</mi><mi>a</mi><mi>t</mi><mi>e</mi></mstyle><mo separator="true">,</mo><mstyle mathsize="0.9em"><mi>a</mi><mi>l</mi><mi>l</mi><mtext> </mtext><mi>a</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>s</mi></mstyle><mo>)</mo><mo fence="false">)</mo></mrow><annotation encoding="application/x-tex">Q({\small state}, {\small action}) \leftarrow (1 - \alpha) Q({\small state}, {\small action}) + \alpha \Big({\small reward} + \gamma \max_{a} Q({\small next \ state}, {\small all \ actions})\Big) 
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">Q</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault sizing reset-size6 size5">s</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">a</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">e</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault sizing reset-size6 size5">a</span><span class="mord mathdefault sizing reset-size6 size5">c</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">i</span><span class="mord mathdefault sizing reset-size6 size5">o</span><span class="mord mathdefault sizing reset-size6 size5">n</span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">←</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mclose">)</span><span class="mord mathdefault">Q</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault sizing reset-size6 size5">s</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">a</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">e</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault sizing reset-size6 size5">a</span><span class="mord mathdefault sizing reset-size6 size5">c</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">i</span><span class="mord mathdefault sizing reset-size6 size5">o</span><span class="mord mathdefault sizing reset-size6 size5">n</span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.80002em;vertical-align:-0.65002em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mord"><span class="delimsizing size2">(</span></span><span class="mord"><span class="mord mathdefault sizing reset-size6 size5" style="margin-right:0.02778em;">r</span><span class="mord mathdefault sizing reset-size6 size5">e</span><span class="mord mathdefault sizing reset-size6 size5" style="margin-right:0.02691em;">w</span><span class="mord mathdefault sizing reset-size6 size5">a</span><span class="mord mathdefault sizing reset-size6 size5" style="margin-right:0.02778em;">r</span><span class="mord mathdefault sizing reset-size6 size5">d</span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.8499999999999999em;vertical-align:-0.7em;"></span><span class="mord mathdefault" style="margin-right:0.05556em;">γ</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.43056em;"><span style="top:-2.1em;margin-left:0em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span></span></span></span><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span><span class="mop">max</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">Q</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault sizing reset-size6 size5">n</span><span class="mord mathdefault sizing reset-size6 size5">e</span><span class="mord mathdefault sizing reset-size6 size5">x</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mspace sizing reset-size6 size5"> </span><span class="mord mathdefault sizing reset-size6 size5">s</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">a</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">e</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault sizing reset-size6 size5">a</span><span class="mord mathdefault sizing reset-size6 size5" style="margin-right:0.01968em;">l</span><span class="mord mathdefault sizing reset-size6 size5" style="margin-right:0.01968em;">l</span><span class="mspace sizing reset-size6 size5"> </span><span class="mord mathdefault sizing reset-size6 size5">a</span><span class="mord mathdefault sizing reset-size6 size5">c</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">i</span><span class="mord mathdefault sizing reset-size6 size5">o</span><span class="mord mathdefault sizing reset-size6 size5">n</span><span class="mord mathdefault sizing reset-size6 size5">s</span></span><span class="mclose">)</span><span class="mord"><span class="delimsizing size2">)</span></span></span></span></span></span></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Gabor Loss]]></title>
-        <id>https://fuyunfei.github.io/post/gabor-loss/</id>
-        <link href="https://fuyunfei.github.io/post/gabor-loss/">
-        </link>
-        <updated>2019-10-15T07:29:47.000Z</updated>
-        <summary type="html"><![CDATA[<p>如何使用preset的卷积核作为loss</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>如何使用preset的卷积核作为loss</p>
-<!-- more -->
-<pre><code class="language-python">def gabor_kernel_weight(shape):
-    # cv2.getGaborKernel(ksize, sigma, theta, lambda, gamma, psi, ktype)
-    # ksize - size of gabor filter (n, n)
-    # sigma - standard deviation of the gaussian function
-    # theta - orientation of the normal to the parallel stripes
-    # lambda - wavelength of the sunusoidal factor
-    # gamma - spatial aspect ratio
-    # psi - phase offset
-    # ktype - type and range of values that each pixel in the gabor kernel can hold
-    g_kernels = [cv2.getGaborKernel((7, 7), 8.0, i*np.pi/16.0, 5.0, 0.5, 0, ktype=cv2.CV_32F) for i in range(16)]
-    g_kernels=np.stack(g_kernels, axis=-1) 
-    g_kernels=np.stack([g_kernels, g_kernels , g_kernels],axis=-2) 
-    assert g_kernels.shape == shape
-    return K.variable(g_kernels, dtype='float32')
 
-def gabor_loss(y_true,y_pred):
-    gabor_kernel_weights= gabor_kernel_weight((7,7,3,16)) # 设置 kernel 的 为 7x7x3x16 的gabor filter 
-    # b = np.zeros((16,))        
-    # garborlayer = Conv2D(16,kernel_size=(7,7),weights=[gabor_kernel_weights,b]) 
-    # garborlayer(y_true)
-    garbor_true= K.conv2d(y_true,gabor_kernel_weights,padding='same')
-    garbor_pred= K.conv2d(y_pred,gabor_kernel_weights,padding='same')
-    # Conv2D(16,kernel_size=(7,7),weights=[gabor_kernel_weights,b])(y_true)
-    gabor_mse_loss=keras.losses.mean_squared_error(garbor_true,garbor_pred)
-    mae_loss =  keras.losses.mean_absolute_error(y_pred,y_true)
-    # print('gabor_loss%f  mae_loss%f '% gabor_mse_loss.eval(), mae_loss)
-    return mae_loss+0.1*gabor_mse_loss
-    ``` 
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Minimal LSTM]]></title>
-        <id>https://fuyunfei.github.io/post/minimal_lstm/</id>
-        <link href="https://fuyunfei.github.io/post/minimal_lstm/">
-        </link>
-        <updated>2019-10-13T13:38:10.000Z</updated>
-        <summary type="html"><![CDATA[<p>LSTM with minimum code</p>
-<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1571252138234.png" alt="" width="600" loading="lazy"></figure>
-]]></summary>
-        <content type="html"><![CDATA[<p>LSTM with minimum code</p>
-<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1571252138234.png" alt="" width="600" loading="lazy"></figure>
-<!-- more -->
-<pre><code class="language-python">import numpy as np
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://fuyunfei.github.io/post/business-plan/">
+                  <h3 class="post-title">
+                    Business Plan
+                  </h3>
+                </a>
+              </div>
+            
 
-from keras.models import Sequential
-from keras.layers import Dense
-from keras.layers import LSTM
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
 
 
-data = [[i for i in range(100)]]
-data = np.array(data, dtype=float)
-target = [[i for i in range(1,101)]]
-target = np.array(target, dtype=float)
-
-data = data.reshape((1, 1, 100)) 
-target = target.reshape((1, 1, 100)) 
-x_test=[i for i in range(100,200)]
-x_test=np.array(x_test).reshape((1,1,100));
-y_test=[i for i in range(101,201)]
-y_test=np.array(y_test).reshape(1,1,100)
 
 
-model = Sequential()  
-model.add(LSTM(100, input_shape=(1, 100),return_sequences=True))
-model.add(Dense(100))
-model.compile(loss='mean_absolute_error', optimizer='adam',metrics=['accuracy'])
-model.fit(data, target, nb_epoch=100, batch_size=1, \
-verbose=2,validation_data=(x_test, y_test))
-
-predict = model.predict(data)
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Tensor Smoothness ]]></title>
-        <id>https://fuyunfei.github.io/post/how-to-smooth-the-output-image/</id>
-        <link href="https://fuyunfei.github.io/post/how-to-smooth-the-output-image/">
-        </link>
-        <updated>2019-09-29T21:36:48.000Z</updated>
-        <summary type="html"><![CDATA[<p>Total variation loss could be a solution which basically calculate the gradient of the tensor.</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>Total variation loss could be a solution which basically calculate the gradient of the tensor.</p>
-<!-- more -->
-<pre><code class="language-python">    def total_variation(self,x):
-        assert K.ndim(x) == 4
-        if K.image_data_format() == 'channels_first':
-            a = x[:, :, :-1, :- 1] - x[:, :, 1:, :-1]
-            b = x[:, :, :-1, :-1] - x[:, :, :-1, 1:]
-        else:
-            a = x[:, :-1, :-1, :] - x[:, 1:, :-1, :]
-            b = x[:, :-1, :-1, :] - x[:, :- 1, 1:, :]
-        return K.concatenate((a,b))
-
-    def total_variation_loss(self,x):
-        assert K.ndim(x) == 4
-        if K.image_data_format() == 'channels_first':
-            a = K.square(x[:, :, :-1, :- 1] - x[:, :, 1:, :-1])
-            b = K.square(x[:, :, :-1, :-1] - x[:, :, :-1, 1:])
-        else:
-            a = K.square(x[:, :-1, :-1, :] - x[:, 1:, :-1, :])
-            b = K.square( x[:, :-1, :-1, :] - x[:, :- 1, 1:, :])
-        return K.sum(K.pow(a + b, 1.25))
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Masked Loss]]></title>
-        <id>https://fuyunfei.github.io/post/masked-loss-in-tensorflow/</id>
-        <link href="https://fuyunfei.github.io/post/masked-loss-in-tensorflow/">
-        </link>
-        <updated>2019-09-29T07:24:17.000Z</updated>
-        <summary type="html"><![CDATA[<p>use tf.where to indicate the mask</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>use tf.where to indicate the mask</p>
-<!-- more -->
-<pre><code class="language-python">import numpy as np
-import tensorflow as tf
-
-'''
- ' Huber loss.
- ' https://jaromiru.com/2017/05/27/on-using-huber-loss-in-deep-q-learning/
- ' https://en.wikipedia.org/wiki/Huber_loss
-'''
-def huber_loss(y_true, y_pred, clip_delta=1.0):
-  error = y_true - y_pred
-  cond  = tf.keras.backend.abs(error) &lt; clip_delta
-
-  squared_loss = 0.5 * tf.keras.backend.square(error)
-  linear_loss  = clip_delta * (tf.keras.backend.abs(error) - 0.5 * clip_delta)
-
-  return tf.where(cond, squared_loss, linear_loss)
-
-'''
- ' Same as above but returns the mean loss.
-'''
-def huber_loss_mean(y_true, y_pred, clip_delta=1.0):
-  return tf.keras.backend.mean(huber_loss(y_true, y_pred, clip_delta))
-</code></pre>
-]]></content>
-    </entry>
-</feed>
+  </body>
+</html>
