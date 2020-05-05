@@ -1,24 +1,108 @@
-<?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://fuyunfei.github.io</id>
-    <title>皇后大道中</title>
-    <updated>2020-05-05T05:31:31.876Z</updated>
-    <generator>https://github.com/jpmonette/feed</generator>
-    <link rel="alternate" href="https://fuyunfei.github.io"/>
-    <link rel="self" href="https://fuyunfei.github.io/atom.xml"/>
-    <subtitle>皇后大道西</subtitle>
-    <logo>https://fuyunfei.github.io/images/avatar.png</logo>
-    <icon>https://fuyunfei.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2020, 皇后大道中</rights>
-    <entry>
-        <title type="html"><![CDATA[Effective TensorFlow]]></title>
-        <id>https://fuyunfei.github.io/post/effective-tensorflow/</id>
-        <link href="https://fuyunfei.github.io/post/effective-tensorflow/">
-        </link>
-        <updated>2020-05-05T05:28:22.000Z</updated>
-        <summary type="html"><![CDATA[<p>cc@https://github.com/vahidk/EffectiveTensorflow</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>cc@https://github.com/vahidk/EffectiveTensorflow</p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Effective TensorFlow | 皇后大道中</title>
+<meta name="description" content="皇后大道西">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://fuyunfei.github.io/favicon.ico?v=1588656687782">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://fuyunfei.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://fuyunfei.github.io">
+        <img src="https://fuyunfei.github.io/images/avatar.png?v=1588656687782" class="site-logo">
+        <h1 class="site-title">皇后大道中</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            关于
+          </a>
+        
+      
+        
+          <a href="/art" class="site-nav">
+            画架
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      皇后大道西
+    </div>
+    <div class="site-footer">
+       | <a class="rss" href="https://fuyunfei.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Effective TensorFlow</h2>
+            <div class="post-date">2020-05-05</div>
+            
+            <div class="post-content">
+              <p>cc@https://github.com/vahidk/EffectiveTensorflow</p>
 <!-- more -->
 <h1 id="table-of-contents">Table of Contents</h1>
 <h2 id="part-i-tensorflow-fundamentals">Part I: TensorFlow Fundamentals</h2>
@@ -1199,753 +1283,47 @@ def softmax_entropy(logits, dim=-1):
 
   return tensor
 </code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Effective PyTorch]]></title>
-        <id>https://fuyunfei.github.io/post/effective-pytorch/</id>
-        <link href="https://fuyunfei.github.io/post/effective-pytorch/">
-        </link>
-        <updated>2020-05-05T03:26:59.000Z</updated>
-        <summary type="html"><![CDATA[<p>CC@https://github.com/vahidk/EffectivePyTorch</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>CC@https://github.com/vahidk/EffectivePyTorch</p>
-<!-- more -->
-<h1 id="table-of-contents">Table of Contents</h1>
-<h2 id="part-i-pytorch-fundamentals">Part I: PyTorch Fundamentals</h2>
-<ol>
-<li><a href="#basics">PyTorch basics</a></li>
-<li><a href="#modules">Encapsulate your model with Modules</a></li>
-<li><a href="#broadcast">Broadcasting the good and the ugly</a></li>
-<li><a href="#overloaded_ops">Take advantage of the overloaded operators</a></li>
-<li><a href="#torchscript">Optimizing runtime with TorchScript</a></li>
-<li><a href="#dataloader">Building efficient custom data loaders</a></li>
-<li><a href="#stable">Numerical stability in PyTorch</a></li>
-</ol>
-<hr>
-<p><em>To install PyTorch follow the <a href="https://pytorch.org/">instructions on the official website</a>:</em></p>
-<pre><code>pip install torch torchvision
-</code></pre>
-<p><em>We aim to gradually expand this series by adding new articles and keep the content up to date with the latest releases of PyTorch API. If you have suggestions on how to improve this series or find the explanations ambiguous, feel free to create an issue, send patches, or reach out by email.</em></p>
-<h1 id="part-i-pytorch-fundamentals-2">Part I: PyTorch Fundamentals</h1>
-<p><a name="fundamentals"></a></p>
-<h2 id="pytorch-basics">PyTorch basics</h2>
-<p><a name="basics"></a><br>
-PyTorch is one of the most popular libraries for numerical computation and currently is amongst the most widely used libraries for performing machine learning research. In many ways PyTorch is similar to NumPy, with the additional benefit that PyTorch allows you to perform your computations on CPUs, GPUs, and TPUs without any material change to your code. PyTorch also makes it easy to distribute your computation across multiple devices or machines. One of the most important features of PyTorch is automatic differentiation. It allows computing the gradients of your functions analytically in an efficient manner which is crucial for training machine learning models using gradient descent method. Our goal here is to provide a gentle introduction to PyTorch and discuss best practices for using PyTorch.</p>
-<p>The first thing to learn about PyTorch is the concept of Tensors. Tensors are simply multidimensional arrays. A PyTorch Tensor is very similar to a NumPy array with some <s>magical</s> additional functionality.</p>
-<p>A tensor can store a scalar value:</p>
-<pre><code class="language-python">import torch
-a = torch.tensor(3)
-print(a)  # tensor(3)
-</code></pre>
-<p>or an array:</p>
-<pre><code class="language-python">b = torch.tensor([1, 2])
-print(b)  # tensor([1, 2])
-</code></pre>
-<p>a matrix:</p>
-<pre><code class="language-python">c = torch.zeros([2, 2])
-print(c)  # tensor([[0., 0.], [0., 0.]])
-</code></pre>
-<p>or any arbitrary dimensional tensor:</p>
-<pre><code class="language-python">d = torch.rand([2, 2, 2])
-</code></pre>
-<p>Tensors can be used to perform algebraic operations efficiently. One of the most commonly used operations in machine learning applications is matrix multiplication. Say you want to multiply two random matrices of size 3x5 and 5x4, this can be done with the matrix multiplication (@) operation:</p>
-<pre><code class="language-python">import torch
 
-x = torch.randn([3, 5])
-y = torch.randn([5, 4])
-z = x @ y
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://fuyunfei.github.io/post/effective-pytorch/">
+                  <h3 class="post-title">
+                    Effective PyTorch
+                  </h3>
+                </a>
+              </div>
+            
 
-print(z)
-</code></pre>
-<p>Similarly, to add two vectors, you can do:</p>
-<pre><code class="language-python">z = x + y
-</code></pre>
-<p>To convert a tensor into a numpy array you can call Tensor's numpy() method:</p>
-<pre><code class="language-python">print(z.numpy())
-</code></pre>
-<p>And you can always convert a numpy array into a tensor by:</p>
-<pre><code class="language-python">x = torch.tensor(np.random.normal([3, 5]))
-</code></pre>
-<h3 id="automatic-differentiation">Automatic differentiation</h3>
-<p>The most important advantage of PyTorch over NumPy is its automatic differentiation functionality which is very useful in optimization applications such as optimizing parameters of a neural network. Let's try to understand it with an example.</p>
-<p>Say you have a composite function which is a chain of two functions: <code>g(u(x))</code>.<br>
-To compute the derivative of <code>g</code> with respect to <code>x</code> we can use the chain rule which states that: <code>dg/dx = dg/du * du/dx</code>. PyTorch can analytically compute the derivatives for us.</p>
-<p>To compute the derivatives in PyTorch first we create a tensor and set its <code>requires_grad</code> to true. We can use tensor operations to define our functions. We assume <code>u</code> is a quadratic function and <code>g</code> is a simple linear function:</p>
-<pre><code class="language-python">x = torch.tensor(1.0, requires_grad=True)
+            
 
-def u(x):
-  return x * x
+          </div>
 
-def g(u):
-  return -u
-</code></pre>
-<p>In this case our composite function is <code>g(u(x)) = -x*x</code>. So its derivative with respect to <code>x</code> is <code>-2x</code>. At point <code>x=1</code>, this is equal to <code>-2</code>.</p>
-<p>Let's verify this. This can be done using grad function in PyTorch:</p>
-<pre><code class="language-python">dgdx = torch.autograd.grad(g(u(x)), x)[0]
-print(dgdx)  # tensor(-2.)
-</code></pre>
-<h3 id="curve-fitting">Curve fitting</h3>
-<p>To understand how powerful automatic differentiation can be let's have a look at another example. Assume that we have samples from a curve (say <code>f(x) = 5x^2 + 3</code>) and we want to estimate <code>f(x)</code> based on these samples. We define a parametric function <code>g(x, w) = w0 x^2 + w1 x + w2</code>, which is a function of the input <code>x</code> and latent parameters <code>w</code>, our goal is then to find the latent parameters such that <code>g(x, w) ≈ f(x)</code>. This can be done by minimizing the following loss function: <code>L(w) = Σ (f(x) - g(x, w))^2</code>. Although there's a closed form solution for this simple problem, we opt to use a more general approach that can be applied to any arbitrary differentiable function, and that is using stochastic gradient descent. We simply compute the average gradient of <code>L(w)</code> with respect to <code>w</code> over a set of sample points and move in the opposite direction.</p>
-<p>Here's how it can be done in PyTorch:</p>
-<pre><code class="language-python">import numpy as np
-import torch
+        </div>
+      </div>
+    </div>
 
-# Assuming we know that the desired function is a polynomial of 2nd degree, we
-# allocate a vector of size 3 to hold the coefficients and initialize it with
-# random noise.
-w = torch.tensor(torch.randn([3, 1]), requires_grad=True)
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
-# We use the Adam optimizer with learning rate set to 0.1 to minimize the loss.
-opt = torch.optim.Adam([w], 0.1)
+<script type="application/javascript">
 
-def model(x):
-    # We define yhat to be our estimate of y.
-    f = torch.stack([x * x, x, torch.ones_like(x)], 1)
-    yhat = torch.squeeze(f @ w, 1)
-    return yhat
+AOS.init();
 
-def compute_loss(y, yhat):
-    # The loss is defined to be the mean squared error distance between our
-    # estimate of y and its true value. 
-    loss = torch.nn.functional.mse_loss(yhat, y)
-    return loss
+hljs.initHighlightingOnLoad()
 
-def generate_data():
-    # Generate some training data based on the true function
-    x = torch.rand(100) * 20 - 10
-    y = 5 * x * x + 3
-    return x, y
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
 
-def train_step():
-    x, y = generate_data()
+</script>
 
-    yhat = model(x)
-    loss = compute_loss(y, yhat)
 
-    opt.zero_grad()
-    loss.backward()
-    opt.step()
 
-for _ in range(1000):
-    train_step()
 
-print(w.detach().numpy())
-</code></pre>
-<p>By running this piece of code you should see a result close to this:</p>
-<pre><code class="language-python">[4.9924135, 0.00040895029, 3.4504161]
-</code></pre>
-<p>Which is a relatively close approximation to our parameters.</p>
-<p>This is just tip of the iceberg for what PyTorch can do. Many problems such as optimizing large neural networks with millions of parameters can be implemented efficiently in PyTorch in just a few lines of code. PyTorch takes care of scaling across multiple devices, and threads, and supports a variety of platforms.</p>
-<h2 id="encapsulate-your-model-with-modules">Encapsulate your model with Modules</h2>
-<p><a name="modules"></a><br>
-In the previous example we used bare bone tensors and tensor operations to build our model. To make your code slightly more organized it's recommended to use PyTorch's modules. A module is simply a container for your parameters and encapsulates model operations. For example say you want to represent a linear model <code>y = ax + b</code>. This model can be represented with the following code:</p>
-<pre><code class="language-python">import torch
-
-class Net(torch.nn.Module):
-
-  def __init__(self):
-    super().__init__()
-    self.a = torch.nn.Parameter(torch.rand(1))
-    self.b = torch.nn.Parameter(torch.rand(1))
-
-  def forward(self, x):
-    yhat = self.a * x + self.b
-    return yhat
-</code></pre>
-<p>To use this model in practice you instantiate the module and simply call it like a function:</p>
-<pre><code class="language-python">x = torch.arange(100, dtype=torch.float32)
-
-net = Net()
-y = net(x)
-</code></pre>
-<p>Parameters are essentially tensors with <code>requires_grad</code> set to true. It's convenient to use parameters because you can simply retrieve them all with module's <code>parameters()</code> method:</p>
-<pre><code class="language-python">for p in net.parameters():
-    print(p)
-</code></pre>
-<p>Now, say you have an unknown function <code>y = 5x + 3 + some noise</code>, and you want to optimize the parameters of your model to fit this function.  You can start by sampling some points from your function:</p>
-<pre><code class="language-python">x = torch.arange(100, dtype=torch.float32) / 100
-y = 5 * x + 3 + torch.rand(100) * 0.3
-</code></pre>
-<p>Similar to the previous example, you can define a loss function and optimize the parameters of your model as follows:</p>
-<pre><code class="language-python">criterion = torch.nn.MSELoss()
-optimizer = torch.optim.SGD(net.parameters(), lr=0.01)
-
-for i in range(10000):
-  net.zero_grad()
-  yhat = net(x)
-  loss = criterion(yhat, y)
-  loss.backward()
-  optimizer.step()
-
-print(net.a, net.b) # Should be close to 5 and 3
-</code></pre>
-<p>PyTorch comes with a number of predefined modules. One such module is <code>torch.nn.Linear</code> which is a more general form of a linear function than what we defined above. We can rewrite our module above using <code>torch.nn.Linear</code> like this:</p>
-<pre><code class="language-python">class Net(torch.nn.Module):
-
-  def __init__(self):
-    super().__init__()
-    self.linear = torch.nn.Linear(1, 1)
-
-  def forward(self, x):
-    yhat = self.linear(x.unsqueeze(1)).squeeze(1)
-    return yhat
-</code></pre>
-<p>Note that we used squeeze and unsqueeze since <code>torch.nn.Linear</code> operates on batch of vectors as opposed to scalars.</p>
-<p>By default calling parameters() on a module will return the parameters of all its submodules:</p>
-<pre><code class="language-python">net = Net()
-for p in net.parameters():
-    print(p)
-</code></pre>
-<p>There are some predefined modules that act as a container for other modules. The most commonly used container module is <code>torch.nn.Sequential</code>. As its name implies it's used to to stack multiple modules (or layers) on top of each other. For example to stack two Linear layers with a <code>ReLU</code> nonlinearity in between you can do:</p>
-<pre><code class="language-python">model = torch.nn.Sequential(
-    torch.nn.Linear(64, 32),
-    torch.nn.ReLU(),
-    torch.nn.Linear(32, 10),
-)
-</code></pre>
-<h2 id="broadcasting-the-good-and-the-ugly">Broadcasting the good and the ugly</h2>
-<p><a name="broadcast"></a><br>
-PyTorch supports broadcasting elementwise operations. Normally when you want to perform operations like addition and multiplication, you need to make sure that shapes of the operands match, e.g. you can’t add a tensor of shape <code>[3, 2]</code> to a tensor of shape <code>[3, 4]</code>. But there’s a special case and that’s when you have a singular dimension. PyTorch implicitly tiles the tensor across its singular dimensions to match the shape of the other operand. So it’s valid to add a tensor of shape <code>[3, 2]</code> to a tensor of shape <code>[3, 1]</code>.</p>
-<pre><code class="language-python">import torch
-
-a = torch.tensor([[1., 2.], [3., 4.]])
-b = torch.tensor([[1.], [2.]])
-# c = a + b.repeat([1, 2])
-c = a + b
-
-print(c)
-</code></pre>
-<p>Broadcasting allows us to perform implicit tiling which makes the code shorter, and more memory efficient, since we don’t need to store the result of the tiling operation. One neat place that this can be used is when combining features of varying length. In order to concatenate features of varying length we commonly tile the input tensors, concatenate the result and apply some nonlinearity. This is a common pattern across a variety of neural network architectures:</p>
-<pre><code class="language-python">a = torch.rand([5, 3, 5])
-b = torch.rand([5, 1, 6])
-
-linear = torch.nn.Linear(11, 10)
-
-# concat a and b and apply nonlinearity
-tiled_b = b.repeat([1, 3, 1])
-c = torch.cat([a, tiled_b], 2)
-d = torch.nn.functional.relu(linear(c))
-
-print(d.shape)  # torch.Size([5, 3, 10])
-</code></pre>
-<p>But this can be done more efficiently with broadcasting. We use the fact that <code>f(m(x + y))</code> is equal to <code>f(mx + my)</code>. So we can do the linear operations separately and use broadcasting to do implicit concatenation:</p>
-<pre><code class="language-python">a = torch.rand([5, 3, 5])
-b = torch.rand([5, 1, 6])
-
-linear1 = torch.nn.Linear(5, 10)
-linear2 = torch.nn.Linear(6, 10)
-
-pa = linear1(a)
-pb = linear2(b)
-d = torch.nn.functional.relu(pa + pb)
-
-print(d.shape)  # torch.Size([5, 3, 10])
-</code></pre>
-<p>In fact this piece of code is pretty general and can be applied to tensors of arbitrary shape as long as broadcasting between tensors is possible:</p>
-<pre><code class="language-python">class Merge(torch.nn.Module):
-    def __init__(self, in_features1, in_features2, out_features, activation=None):
-        super().__init__()
-        self.linear1 = torch.nn.Linear(in_features1, out_features)
-        self.linear2 = torch.nn.Linear(in_features2, out_features)
-        self.activation = activation
-
-    def forward(self, a, b):
-        pa = self.linear1(a)
-        pb = self.linear2(b)
-        c = pa + pb
-        if self.activation is not None:
-            c = self.activation(c)
-        return c
-</code></pre>
-<p>So far we discussed the good part of broadcasting. But what’s the ugly part you may ask? Implicit assumptions almost always make debugging harder to do. Consider the following example:</p>
-<pre><code class="language-python">a = torch.tensor([[1.], [2.]])
-b = torch.tensor([1., 2.])
-c = torch.sum(a + b)
-
-print(c)
-</code></pre>
-<p>What do you think the value of <code>c</code> would be after evaluation? If you guessed 6, that’s wrong. It’s going to be 12. This is because when rank of two tensors don’t match, PyTorch automatically expands the first dimension of the tensor with lower rank before the elementwise operation, so the result of addition would be <code>[[2, 3], [3, 4]]</code>, and the reducing over all parameters would give us 12.</p>
-<p>The way to avoid this problem is to be as explicit as possible. Had we specified which dimension we would want to reduce across, catching this bug would have been much easier:</p>
-<pre><code class="language-python">a = torch.tensor([[1.], [2.]])
-b = torch.tensor([1., 2.])
-c = torch.sum(a + b, 0)
-
-print(c)
-</code></pre>
-<p>Here the value of <code>c</code> would be <code>[5, 7]</code>, and we immediately would guess based on the shape of the result that there’s something wrong. A general rule of thumb is to always specify the dimensions in reduction operations and when using <code>torch.squeeze</code>.</p>
-<h2 id="take-advantage-of-the-overloaded-operators">Take advantage of the overloaded operators</h2>
-<p><a name="overloaded_ops"></a><br>
-Just like NumPy, PyTorch overloads a number of python operators to make PyTorch code shorter and more readable.</p>
-<p>The slicing op is one of the overloaded operators that can make indexing tensors very easy:</p>
-<pre><code class="language-python">z = x[begin:end]  # z = torch.narrow(0, begin, end-begin)
-</code></pre>
-<p>Be very careful when using this op though. The slicing op, like any other op, has some overhead. Because it's a common op and innocent looking it may get overused a lot which may lead to inefficiencies. To understand how inefficient this op can be let's look at an example. We want to manually perform reduction across the rows of a matrix:</p>
-<pre><code class="language-python">import torch
-import time
-
-x = torch.rand([500, 10])
-
-z = torch.zeros([10])
-
-start = time.time()
-for i in range(500):
-    z += x[i]
-print(&quot;Took %f seconds.&quot; % (time.time() - start))
-</code></pre>
-<p>This runs quite slow and the reason is that we are calling the slice op 500 times, which adds a lot of overhead. A better choice would have been to use <code>torch.unbind</code> op to slice the matrix into a list of vectors all at once:</p>
-<pre><code class="language-python">z = torch.zeros([10])
-for x_i in torch.unbind(x):
-    z += x_i
-</code></pre>
-<p>This is significantly (~30% on my machine) faster.</p>
-<p>Of course, the right way to do this simple reduction is to use <code>torch.sum</code> op to this in one op:</p>
-<pre><code class="language-python">z = torch.sum(x, dim=0)
-</code></pre>
-<p>which is extremely fast (~100x faster on my machine).</p>
-<p>PyTorch also overloads a range of arithmetic and logical operators:</p>
-<pre><code class="language-python">z = -x  # z = torch.neg(x)
-z = x + y  # z = torch.add(x, y)
-z = x - y
-z = x * y  # z = torch.mul(x, y)
-z = x / y  # z = torch.div(x, y)
-z = x // y
-z = x % y
-z = x ** y  # z = torch.pow(x, y)
-z = x @ y  # z = torch.matmul(x, y)
-z = x &gt; y
-z = x &gt;= y
-z = x &lt; y
-z = x &lt;= y
-z = abs(x)  # z = torch.abs(x)
-z = x &amp; y
-z = x | y
-z = x ^ y  # z = torch.logical_xor(x, y)
-z = ~x  # z = torch.logical_not(x)
-z = x == y  # z = torch.eq(x, y)
-z = x != y  # z = torch.ne(x, y)
-</code></pre>
-<p>You can also use the augmented version of these ops. For example <code>x += y</code> and <code>x **= 2</code> are also valid.</p>
-<p>Note that Python doesn't allow overloading <code>and</code>, <code>or</code>, and <code>not</code> keywords.</p>
-<h2 id="optimizing-runtime-with-torchscript">Optimizing runtime with TorchScript</h2>
-<p><a name="torchscript"></a><br>
-PyTorch is optimized to perform operations on large tensors. Doing many operations on small tensors is quite inefficient in PyTorch. So, whenever possible you should rewrite your computations in batch form to reduce overhead and improve performance. If there's no way you can manually batch your operations, using TorchScript may improve your code's performance. TorchScript is simply a subset of Python functions that are recognized by PyTorch. PyTorch can automatically optimize your TorchScript code using its just in time (jit) compiler and reduce some overheads.</p>
-<p>Let's look at an example. A very common operation in ML applications is &quot;batch gather&quot;. This operation can simply written as <code>output[i] = input[i, index[i]]</code>. This can be simply implemented in PyTorch as follows:</p>
-<pre><code class="language-python">import torch
-def batch_gather(tensor, indices):
-    output = []
-    for i in range(tensor.size(0)):
-        output += [tensor[i][indices[i]]]
-    return torch.stack(output)
-</code></pre>
-<p>To implement the same function using TorchScript simply use the <code>torch.jit.script</code> decorator:</p>
-<pre><code class="language-python">@torch.jit.script
-def batch_gather_jit(tensor, indices):
-    output = []
-    for i in range(tensor.size(0)):
-        output += [tensor[i][indices[i]]]
-    return torch.stack(output)
-</code></pre>
-<p>On my tests this is about 10% faster.</p>
-<p>But nothing beats manually batching your operations. A vectorized implementation in my tests is 100 times faster:</p>
-<pre><code class="language-python">def batch_gather_vec(tensor, indices):
-    shape = list(tensor.shape)
-    flat_first = torch.reshape(
-        tensor, [shape[0] * shape[1]] + shape[2:])
-    offset = torch.reshape(
-        torch.arange(shape[0]).cuda() * shape[1],
-        [shape[0]] + [1] * (len(indices.shape) - 1))
-    output = flat_first[indices + offset]
-    return output
-</code></pre>
-<h2 id="building-efficient-custom-data-loaders">Building efficient custom data loaders</h2>
-<p><a name="dataloader"></a></p>
-<p>In the last lesson we talked about writing efficient PyTorch code. But to make your code run with maximum efficiency you also need to load your data efficiently into your device's memory. Fortunately PyTorch offers a tool to make data loading easy. It's called a <code>DataLoader</code>. A <code>DataLoader</code> uses multiple workers to simultanously load data from a <code>Dataset</code> and optionally uses a <code>Sampler</code> to sample data entries and form a batch.</p>
-<p>If you can randomly access your data, using a <code>DataLoader</code> is very easy: You simply need to implement a <code>Dataset</code> class that implements <code>__getitem__</code> (to read each data item) and <code>__len__</code> (to return the number of items in the dataset) methods. For example here's how to load images from a given directory:</p>
-<pre><code class="language-python">import glob
-import os
-import random
-import cv2
-import torch
-
-class ImageDirectoryDataset(torch.utils.data.Dataset):
-    def __init__(path, pattern):
-        self.paths = list(glob.glob(os.path.join(path, pattern)))
-
-    def __len__(self):
-        return len(self.paths)
-
-    def __item__(self):
-        path = random.choice(paths)
-        return cv2.imread(path, 1)
-</code></pre>
-<p>To load all jpeg images from a given directory you can then do the following:</p>
-<pre><code class="language-python">dataloader = torch.utils.data.DataLoader(ImageDirectoryDataset(&quot;/data/imagenet/*.jpg&quot;), num_workers=8)
-for data in dataloader:
-    # do something with data
-</code></pre>
-<p>Here we are using 8 workers to simultanously read our data from the disk. You can tune the number of workers on your machine for optimal results.</p>
-<p>Using a <code>DataLoader</code> to read data with random access may be ok if you have fast storage or if your data items are large. But imagine having a network file system with slow connection. Requesting individual files this way can be extremely slow and would probably end up becoming the bottleneck of your training pipeline.</p>
-<p>A better approach is to store your data in a contiguous file format which can be read sequentially. For example if you have a large collection of images you can use tar to create a single archive and extract files from the archive sequentially in python. To do this you can use PyTorch's <code>IterableDataset</code>. To create an <code>IterableDataset</code> class you only need to implement an <code>__iter__</code> method which sequentially reads and yields data items from the dataset.</p>
-<p>A naive implementation would like this:</p>
-<pre><code class="language-python">import tarfile
-import torch
-
-def tar_image_iterator(path):
-    tar = tarfile.open(self.path, &quot;r&quot;)
-    for tar_info in tar:
-        file = tar.extractfile(tar_info)
-        content = file.read()
-        yield cv2.imdecode(content, 1)
-        file.close()
-        tar.members = []
-    tar.close()
-
-class TarImageDataset(torch.utils.data.IterableDataset):
-    def __init__(self, path):
-        super().__init__()
-        self.path = path
-
-    def __iter__(self):
-        yield from tar_image_iterator(self.path)
-</code></pre>
-<p>But there's a major problem with this implementation. If you try to use DataLoader to read from this dataset with more than one worker you'd observe a lot of duplicated images:</p>
-<pre><code class="language-python">dataloader = torch.utils.data.DataLoader(TarImageDataset(&quot;/data/imagenet.tar&quot;), num_workers=8)
-for data in dataloader:
-    # data contains duplicated items
-</code></pre>
-<p>The problem is that each worker creates a separate instance of the dataset and each would start from the beginning of the dataset. One way to avoid this is to instead of having one tar file, split your data into <code>num_workers</code> separate tar files and load each with a separate worker:</p>
-<pre><code class="language-python">class TarImageDataset(torch.utils.data.IterableDataset):
-    def __init__(self, paths):
-        super().__init__()
-        self.paths = paths
-
-    def __iter__(self):
-        worker_info = torch.utils.data.get_worker_info()
-        # For simplicity we assume num_workers is equal to number of tar files
-        if worker_info is None or worker_info.num_workers != len(self.paths):
-            raise ValueError(&quot;Number of workers doesn't match number of files.&quot;)
-        yield from tar_image_iterator(self.paths[worker_info.worker_id])
-</code></pre>
-<p>This is how our dataset class can be used:</p>
-<pre><code class="language-python">dataloader = torch.utils.data.DataLoader(
-    TarImageDataset([&quot;/data/imagenet_part1.tar&quot;, &quot;/data/imagenet_part2.tar&quot;]), num_workers=2)
-for data in dataloader:
-    # do something with data
-</code></pre>
-<p>We discussed a simple strategy to avoid duplicated entries problem. <a href="https://github.com/vahidk/tfrecord">tfrecord</a> package uses slightly more sophisticated strategies to shard your data on the fly.</p>
-<h2 id="numerical-stability-in-pytorch">Numerical stability in PyTorch</h2>
-<p><a name="stable"></a><br>
-When using any numerical computation library such as NumPy or PyTorch, it's important to note that writing mathematically correct code doesn't necessarily lead to correct results. You also need to make sure that the computations are stable.</p>
-<p>Let's start with a simple example. Mathematically, it's easy to see that <code>x * y / y = x</code> for any non zero value of <code>x</code>. But let's see if that's always true in practice:</p>
-<pre><code class="language-python">import numpy as np
-
-x = np.float32(1)
-
-y = np.float32(1e-50)  # y would be stored as zero
-z = x * y / y
-
-print(z)  # prints nan
-</code></pre>
-<p>The reason for the incorrect result is that <code>y</code> is simply too small for float32 type. A similar problem occurs when <code>y</code> is too large:</p>
-<pre><code class="language-python">y = np.float32(1e39)  # y would be stored as inf
-z = x * y / y
-
-print(z)  # prints nan
-</code></pre>
-<p>The smallest positive value that float32 type can represent is 1.4013e-45 and anything below that would be stored as zero. Also, any number beyond 3.40282e+38, would be stored as inf.</p>
-<pre><code class="language-python">print(np.nextafter(np.float32(0), np.float32(1)))  # prints 1.4013e-45
-print(np.finfo(np.float32).max)  # print 3.40282e+38
-</code></pre>
-<p>To make sure that your computations are stable, you want to avoid values with small or very large absolute value. This may sound very obvious, but these kind of problems can become extremely hard to debug especially when doing gradient descent in PyTorch. This is because you not only need to make sure that all the values in the forward pass are within the valid range of your data types, but also you need to make sure of the same for the backward pass (during gradient computation).</p>
-<p>Let's look at a real example. We want to compute the softmax over a vector of logits. A naive implementation would look something like this:</p>
-<pre><code class="language-python">import torch
-
-def unstable_softmax(logits):
-    exp = torch.exp(logits)
-    return exp / torch.sum(exp)
-
-print(unstable_softmax(torch.tensor([1000., 0.])).numpy())  # prints [ nan, 0.]
-</code></pre>
-<p>Note that computing the exponential of logits for relatively small numbers results to gigantic results that are out of float32 range. The largest valid logit for our naive softmax implementation is <code>ln(3.40282e+38) = 88.7</code>, anything beyond that leads to a nan outcome.</p>
-<p>But how can we make this more stable? The solution is rather simple. It's easy to see that <code>exp(x - c) Σ exp(x - c) = exp(x) / Σ exp(x)</code>. Therefore we can subtract any constant from the logits and the result would remain the same. We choose this constant to be the maximum of logits. This way the domain of the exponential function would be limited to <code>[-inf, 0]</code>, and consequently its range would be <code>[0.0, 1.0]</code> which is desirable:</p>
-<pre><code class="language-python">import torch
-
-def softmax(logits):
-    exp = torch.exp(logits - torch.reduce_max(logits))
-    return exp / torch.sum(exp)
-
-print(softmax(torch.tensor([1000., 0.])).numpy())  # prints [ 1., 0.]
-</code></pre>
-<p>Let's look at a more complicated case. Consider we have a classification problem. We use the softmax function to produce probabilities from our logits. We then define our loss function to be the cross entropy between our predictions and the labels. Recall that cross entropy for a categorical distribution can be simply defined as <code>xe(p, q) = -Σ p_i log(q_i)</code>. So a naive implementation of the cross entropy would look like this:</p>
-<pre><code class="language-python">def unstable_softmax_cross_entropy(labels, logits):
-    logits = torch.log(softmax(logits))
-    return -torch.sum(labels * logits)
-
-labels = torch.tensor([0.5, 0.5])
-logits = torch.tensor([1000., 0.])
-
-xe = unstable_softmax_cross_entropy(labels, logits)
-
-print(xe.numpy())  # prints inf
-</code></pre>
-<p>Note that in this implementation as the softmax output approaches zero, the log's output approaches infinity which causes instability in our computation. We can rewrite this by expanding the softmax and doing some simplifications:</p>
-<pre><code class="language-python">def softmax_cross_entropy(labels, logits, dim=-1):
-    scaled_logits = logits - torch.max(logits)
-    normalized_logits = scaled_logits - torch.logsumexp(scaled_logits, dim)
-    return -torch.sum(labels * normalized_logits)
-
-labels = torch.tensor([0.5, 0.5])
-logits = torch.tensor([1000., 0.])
-
-xe = softmax_cross_entropy(labels, logits)
-
-print(xe.numpy())  # prints 500.0
-</code></pre>
-<p>We can also verify that the gradients are also computed correctly:</p>
-<pre><code class="language-python">logits.requires_grad_(True)
-xe = softmax_cross_entropy(labels, logits)
-g = torch.autograd.grad(xe, logits)[0]
-print(g.numpy())  # prints [0.5, -0.5]
-</code></pre>
-<p>Let me remind again that extra care must be taken when doing gradient descent to make sure that the range of your functions as well as the gradients for each layer are within a valid range. Exponential and logarithmic functions when used naively are especially problematic because they can map small numbers to enormous ones and the other way around.</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Business Plan]]></title>
-        <id>https://fuyunfei.github.io/post/business-plan/</id>
-        <link href="https://fuyunfei.github.io/post/business-plan/">
-        </link>
-        <updated>2020-05-01T03:18:43.000Z</updated>
-        <content type="html"><![CDATA[<p>制作BP（Business Plan）<br>
-- 对于拉融资来说BP起到了至关重要的作用<br>
-- 很多人不写BP或是有许多人常写却写不好<br>
-- 公司也好个人也罢都应该把BP认真准备好<br>
-- 学习制作BP可以锻炼商业理解与整理思路<br>
-- BP起到的作用不限于融资也可以寻求合伙</p>
-<p>BP的格式建议：<br>
-- 正常情况下选择PPT（幻灯片）或PDF作为制作格式<br>
-- BP没有标准格式<br>
-- 李自然通常使用Keynote制作然后导出PDF格式<br>
-- 文件大小压缩至2M<br>
-- 内容字体要大，要在手机上进行效果预览的检查<br>
-- BP的长度尽可能控制在20页以内<br>
-- 配合的演讲时长控制在30分钟以内</p>
-<p>核心建议：<br>
-1.团队，操盘项目的是一群怎么样的人？<br>
-2.内容，项目是在做什么？解决了什么市场需求？<br>
-3.规模，项目的市场规模到底有多大？<br>
-4.商业模式，这个项目如何赚钱？收入构成与收入预测<br>
-5.核心优势，核心的优势在什么地方？<br>
-6.关键数据，多维度的关键数据<br>
-7.竞争对手，项目与主要竞争对手的关系<br>
-8.财务状况，支出与未来的财务规划<br>
-9.路线图，过去做了什么、现在要做什么、未来要做什么，时间节点如何规划？<br>
-10.融资，准备融资规模、估值、股权结构</p>
-<p>常规建议<br>
-1.BP必须是创始人制作并且可以进行演讲<br>
-2.准备好30分钟的逐字稿+练好口活<br>
-3.准备好各个时长的版本包括15min、5min，各版本内容的调整<br>
-4.多练习，有条件的可以寻求有经验的朋友进行帮助练习</p>
-<p>常犯错误<br>
-- BP并非详细的商业计划，最大作用是勾起投资人对项目的兴趣<br>
-- 内容不用面面俱到，有理有据即可<br>
-- 不用担心内容以偏概全，没说清楚<br>
-- BP仅作为敲门砖，真正的谈判还是面对面的线下<br>
-- BP的字不用太多，演讲不要照稿念<br>
-- 套话不要多，话术尽可能简洁明了，说人话</p>
-<p>内容重点：<br>
-- 突出增长<br>
-- 投资上高增长项目最抢手也更吸引人，合作上突出增长代表更有未来，寻求合作也会变的轻松<br>
-- 关键的增长数据，尽可能阐述过程而非直接给出一个数值，有条件可以制作成可视化的图片<br>
-- 突出盈利<br>
-- 大环境越好越突出增长，大环境越差尽可能突出盈利<br>
-- 团队的执行能力，一切的投资都是投人<br>
-- 突出CEO的能力<br>
-- 为什么你们的团队是最适合团队，展示过往资历与特质<br>
-- 团队做了什么？进行了哪些调整？</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Depthwise Convolution]]></title>
-        <id>https://fuyunfei.github.io/post/depthwise-convolution/</id>
-        <link href="https://fuyunfei.github.io/post/depthwise-convolution/">
-        </link>
-        <updated>2019-11-11T03:56:08.000Z</updated>
-        <summary type="html"><![CDATA[<!-- Comparing Normal Convolution to Depthwise Convolution -->
-<h2 id="normal-convolution"><strong>Normal Convolution</strong></h2>
-<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1573588680034.png" alt="" width="400" loading="lazy"></figure>
-]]></summary>
-        <content type="html"><![CDATA[<!-- Comparing Normal Convolution to Depthwise Convolution -->
-<h2 id="normal-convolution"><strong>Normal Convolution</strong></h2>
-<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1573588680034.png" alt="" width="400" loading="lazy"></figure>
-<!-- more -->
-<h2 id="depthwise-convolution"><strong>Depthwise Convolution</strong></h2>
-<figure data-type="image" tabindex="2"><img src="https://fuyunfei.github.io/post-images/1573588686254.png" alt="" width="600" loading="lazy"></figure>
-<h2 id="depthwise-seperatable-convolution"><strong>Depthwise Seperatable Convolution</strong></h2>
-<figure data-type="image" tabindex="3"><img src="https://fuyunfei.github.io/post-images/1573588698538.png" alt="" width="600" loading="lazy"></figure>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[RL 总结]]></title>
-        <id>https://fuyunfei.github.io/post/rl-zong-jie/</id>
-        <link href="https://fuyunfei.github.io/post/rl-zong-jie/">
-        </link>
-        <updated>2019-10-30T12:30:50.000Z</updated>
-        <content type="html"><![CDATA[<p>Q Learning :</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Q</mi><mo>(</mo><mstyle mathsize="0.9em"><mi>s</mi><mi>t</mi><mi>a</mi><mi>t</mi><mi>e</mi></mstyle><mo separator="true">,</mo><mstyle mathsize="0.9em"><mi>a</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi></mstyle><mo>)</mo><mo>←</mo><mo>(</mo><mn>1</mn><mo>−</mo><mi>α</mi><mo>)</mo><mi>Q</mi><mo>(</mo><mstyle mathsize="0.9em"><mi>s</mi><mi>t</mi><mi>a</mi><mi>t</mi><mi>e</mi></mstyle><mo separator="true">,</mo><mstyle mathsize="0.9em"><mi>a</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi></mstyle><mo>)</mo><mo>+</mo><mi>α</mi><mo fence="false">(</mo><mstyle mathsize="0.9em"><mi>r</mi><mi>e</mi><mi>w</mi><mi>a</mi><mi>r</mi><mi>d</mi></mstyle><mo>+</mo><mi>γ</mi><munder><mi>max</mi><mo>⁡</mo><mi>a</mi></munder><mi>Q</mi><mo>(</mo><mstyle mathsize="0.9em"><mi>n</mi><mi>e</mi><mi>x</mi><mi>t</mi><mtext> </mtext><mi>s</mi><mi>t</mi><mi>a</mi><mi>t</mi><mi>e</mi></mstyle><mo separator="true">,</mo><mstyle mathsize="0.9em"><mi>a</mi><mi>l</mi><mi>l</mi><mtext> </mtext><mi>a</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mi>s</mi></mstyle><mo>)</mo><mo fence="false">)</mo></mrow><annotation encoding="application/x-tex">Q({\small state}, {\small action}) \leftarrow (1 - \alpha) Q({\small state}, {\small action}) + \alpha \Big({\small reward} + \gamma \max_{a} Q({\small next \ state}, {\small all \ actions})\Big) 
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">Q</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault sizing reset-size6 size5">s</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">a</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">e</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault sizing reset-size6 size5">a</span><span class="mord mathdefault sizing reset-size6 size5">c</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">i</span><span class="mord mathdefault sizing reset-size6 size5">o</span><span class="mord mathdefault sizing reset-size6 size5">n</span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">←</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mclose">)</span><span class="mord mathdefault">Q</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault sizing reset-size6 size5">s</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">a</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">e</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault sizing reset-size6 size5">a</span><span class="mord mathdefault sizing reset-size6 size5">c</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">i</span><span class="mord mathdefault sizing reset-size6 size5">o</span><span class="mord mathdefault sizing reset-size6 size5">n</span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.80002em;vertical-align:-0.65002em;"></span><span class="mord mathdefault" style="margin-right:0.0037em;">α</span><span class="mord"><span class="delimsizing size2">(</span></span><span class="mord"><span class="mord mathdefault sizing reset-size6 size5" style="margin-right:0.02778em;">r</span><span class="mord mathdefault sizing reset-size6 size5">e</span><span class="mord mathdefault sizing reset-size6 size5" style="margin-right:0.02691em;">w</span><span class="mord mathdefault sizing reset-size6 size5">a</span><span class="mord mathdefault sizing reset-size6 size5" style="margin-right:0.02778em;">r</span><span class="mord mathdefault sizing reset-size6 size5">d</span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.8499999999999999em;vertical-align:-0.7em;"></span><span class="mord mathdefault" style="margin-right:0.05556em;">γ</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.43056em;"><span style="top:-2.1em;margin-left:0em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">a</span></span></span></span><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span><span class="mop">max</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.7em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">Q</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault sizing reset-size6 size5">n</span><span class="mord mathdefault sizing reset-size6 size5">e</span><span class="mord mathdefault sizing reset-size6 size5">x</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mspace sizing reset-size6 size5"> </span><span class="mord mathdefault sizing reset-size6 size5">s</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">a</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">e</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault sizing reset-size6 size5">a</span><span class="mord mathdefault sizing reset-size6 size5" style="margin-right:0.01968em;">l</span><span class="mord mathdefault sizing reset-size6 size5" style="margin-right:0.01968em;">l</span><span class="mspace sizing reset-size6 size5"> </span><span class="mord mathdefault sizing reset-size6 size5">a</span><span class="mord mathdefault sizing reset-size6 size5">c</span><span class="mord mathdefault sizing reset-size6 size5">t</span><span class="mord mathdefault sizing reset-size6 size5">i</span><span class="mord mathdefault sizing reset-size6 size5">o</span><span class="mord mathdefault sizing reset-size6 size5">n</span><span class="mord mathdefault sizing reset-size6 size5">s</span></span><span class="mclose">)</span><span class="mord"><span class="delimsizing size2">)</span></span></span></span></span></span></p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Gabor Loss]]></title>
-        <id>https://fuyunfei.github.io/post/gabor-loss/</id>
-        <link href="https://fuyunfei.github.io/post/gabor-loss/">
-        </link>
-        <updated>2019-10-15T07:29:47.000Z</updated>
-        <summary type="html"><![CDATA[<p>如何使用preset的卷积核作为loss</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>如何使用preset的卷积核作为loss</p>
-<!-- more -->
-<pre><code class="language-python">def gabor_kernel_weight(shape):
-    # cv2.getGaborKernel(ksize, sigma, theta, lambda, gamma, psi, ktype)
-    # ksize - size of gabor filter (n, n)
-    # sigma - standard deviation of the gaussian function
-    # theta - orientation of the normal to the parallel stripes
-    # lambda - wavelength of the sunusoidal factor
-    # gamma - spatial aspect ratio
-    # psi - phase offset
-    # ktype - type and range of values that each pixel in the gabor kernel can hold
-    g_kernels = [cv2.getGaborKernel((7, 7), 8.0, i*np.pi/16.0, 5.0, 0.5, 0, ktype=cv2.CV_32F) for i in range(16)]
-    g_kernels=np.stack(g_kernels, axis=-1) 
-    g_kernels=np.stack([g_kernels, g_kernels , g_kernels],axis=-2) 
-    assert g_kernels.shape == shape
-    return K.variable(g_kernels, dtype='float32')
-
-def gabor_loss(y_true,y_pred):
-    gabor_kernel_weights= gabor_kernel_weight((7,7,3,16)) # 设置 kernel 的 为 7x7x3x16 的gabor filter 
-    # b = np.zeros((16,))        
-    # garborlayer = Conv2D(16,kernel_size=(7,7),weights=[gabor_kernel_weights,b]) 
-    # garborlayer(y_true)
-    garbor_true= K.conv2d(y_true,gabor_kernel_weights,padding='same')
-    garbor_pred= K.conv2d(y_pred,gabor_kernel_weights,padding='same')
-    # Conv2D(16,kernel_size=(7,7),weights=[gabor_kernel_weights,b])(y_true)
-    gabor_mse_loss=keras.losses.mean_squared_error(garbor_true,garbor_pred)
-    mae_loss =  keras.losses.mean_absolute_error(y_pred,y_true)
-    # print('gabor_loss%f  mae_loss%f '% gabor_mse_loss.eval(), mae_loss)
-    return mae_loss+0.1*gabor_mse_loss
-    ``` 
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Minimal LSTM]]></title>
-        <id>https://fuyunfei.github.io/post/minimal_lstm/</id>
-        <link href="https://fuyunfei.github.io/post/minimal_lstm/">
-        </link>
-        <updated>2019-10-13T13:38:10.000Z</updated>
-        <summary type="html"><![CDATA[<p>LSTM with minimum code</p>
-<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1571252138234.png" alt="" width="600" loading="lazy"></figure>
-]]></summary>
-        <content type="html"><![CDATA[<p>LSTM with minimum code</p>
-<figure data-type="image" tabindex="1"><img src="https://fuyunfei.github.io/post-images/1571252138234.png" alt="" width="600" loading="lazy"></figure>
-<!-- more -->
-<pre><code class="language-python">import numpy as np
-
-from keras.models import Sequential
-from keras.layers import Dense
-from keras.layers import LSTM
-
-
-data = [[i for i in range(100)]]
-data = np.array(data, dtype=float)
-target = [[i for i in range(1,101)]]
-target = np.array(target, dtype=float)
-
-data = data.reshape((1, 1, 100)) 
-target = target.reshape((1, 1, 100)) 
-x_test=[i for i in range(100,200)]
-x_test=np.array(x_test).reshape((1,1,100));
-y_test=[i for i in range(101,201)]
-y_test=np.array(y_test).reshape(1,1,100)
-
-
-model = Sequential()  
-model.add(LSTM(100, input_shape=(1, 100),return_sequences=True))
-model.add(Dense(100))
-model.compile(loss='mean_absolute_error', optimizer='adam',metrics=['accuracy'])
-model.fit(data, target, nb_epoch=100, batch_size=1, \
-verbose=2,validation_data=(x_test, y_test))
-
-predict = model.predict(data)
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Tensor Smoothness ]]></title>
-        <id>https://fuyunfei.github.io/post/how-to-smooth-the-output-image/</id>
-        <link href="https://fuyunfei.github.io/post/how-to-smooth-the-output-image/">
-        </link>
-        <updated>2019-09-29T21:36:48.000Z</updated>
-        <summary type="html"><![CDATA[<p>Total variation loss could be a solution which basically calculate the gradient of the tensor.</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>Total variation loss could be a solution which basically calculate the gradient of the tensor.</p>
-<!-- more -->
-<pre><code class="language-python">    def total_variation(self,x):
-        assert K.ndim(x) == 4
-        if K.image_data_format() == 'channels_first':
-            a = x[:, :, :-1, :- 1] - x[:, :, 1:, :-1]
-            b = x[:, :, :-1, :-1] - x[:, :, :-1, 1:]
-        else:
-            a = x[:, :-1, :-1, :] - x[:, 1:, :-1, :]
-            b = x[:, :-1, :-1, :] - x[:, :- 1, 1:, :]
-        return K.concatenate((a,b))
-
-    def total_variation_loss(self,x):
-        assert K.ndim(x) == 4
-        if K.image_data_format() == 'channels_first':
-            a = K.square(x[:, :, :-1, :- 1] - x[:, :, 1:, :-1])
-            b = K.square(x[:, :, :-1, :-1] - x[:, :, :-1, 1:])
-        else:
-            a = K.square(x[:, :-1, :-1, :] - x[:, 1:, :-1, :])
-            b = K.square( x[:, :-1, :-1, :] - x[:, :- 1, 1:, :])
-        return K.sum(K.pow(a + b, 1.25))
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Masked Loss]]></title>
-        <id>https://fuyunfei.github.io/post/masked-loss-in-tensorflow/</id>
-        <link href="https://fuyunfei.github.io/post/masked-loss-in-tensorflow/">
-        </link>
-        <updated>2019-09-29T07:24:17.000Z</updated>
-        <summary type="html"><![CDATA[<p>use tf.where to indicate the mask</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>use tf.where to indicate the mask</p>
-<!-- more -->
-<pre><code class="language-python">import numpy as np
-import tensorflow as tf
-
-'''
- ' Huber loss.
- ' https://jaromiru.com/2017/05/27/on-using-huber-loss-in-deep-q-learning/
- ' https://en.wikipedia.org/wiki/Huber_loss
-'''
-def huber_loss(y_true, y_pred, clip_delta=1.0):
-  error = y_true - y_pred
-  cond  = tf.keras.backend.abs(error) &lt; clip_delta
-
-  squared_loss = 0.5 * tf.keras.backend.square(error)
-  linear_loss  = clip_delta * (tf.keras.backend.abs(error) - 0.5 * clip_delta)
-
-  return tf.where(cond, squared_loss, linear_loss)
-
-'''
- ' Same as above but returns the mean loss.
-'''
-def huber_loss_mean(y_true, y_pred, clip_delta=1.0):
-  return tf.keras.backend.mean(huber_loss(y_true, y_pred, clip_delta))
-</code></pre>
-]]></content>
-    </entry>
-</feed>
+  </body>
+</html>
