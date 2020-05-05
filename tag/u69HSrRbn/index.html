@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Masked Loss | 皇后大道中</title>
+<title>art | 皇后大道中</title>
 <meta name="description" content="皇后大道西">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
@@ -97,56 +97,28 @@
 
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
-          <div class="post-detail">
-            <h2 class="post-title">Masked Loss</h2>
-            <div class="post-date">2019-09-29</div>
-            
-            <div class="post-content">
-              <p>use tf.where to indicate the mask</p>
-<!-- more -->
-<pre><code class="language-python">import numpy as np
-import tensorflow as tf
-
-'''
- ' Huber loss.
- ' https://jaromiru.com/2017/05/27/on-using-huber-loss-in-deep-q-learning/
- ' https://en.wikipedia.org/wiki/Huber_loss
-'''
-def huber_loss(y_true, y_pred, clip_delta=1.0):
-  error = y_true - y_pred
-  cond  = tf.keras.backend.abs(error) &lt; clip_delta
-
-  squared_loss = 0.5 * tf.keras.backend.square(error)
-  linear_loss  = clip_delta * (tf.keras.backend.abs(error) - 0.5 * clip_delta)
-
-  return tf.where(cond, squared_loss, linear_loss)
-
-'''
- ' Same as above but returns the mean loss.
-'''
-def huber_loss_mean(y_true, y_pred, clip_delta=1.0):
-  return tf.keras.backend.mean(huber_loss(y_true, y_pred, clip_delta))
-</code></pre>
-
-            </div>
-            
-              <div class="tag-container">
-                
-                  <a href="https://fuyunfei.github.io/tag/4CHy0fyRq/" class="tag">
-                    Deaplearning
-                  </a>
-                
-                  <a href="https://fuyunfei.github.io/tag/sfAI9SISzN/" class="tag">
-                    tricks
-                  </a>
-                
+          <h2 class="current-tag">标签: art</h2>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://fuyunfei.github.io/post/sketch-1/">
+                  <h2 class="post-title">sketch 1</h2>
+                </a>
+                <div class="post-date">
+                  2020-05-05
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
               </div>
-            
-            
+              
+            </article>
+          
 
-            
-
-          </div>
+          <div class="pagination-container">
+  
+  
+</div>
 
         </div>
       </div>
