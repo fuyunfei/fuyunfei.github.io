@@ -3,13 +3,13 @@
   <head>
     <meta charset="utf-8" >
 
-<title>Pytorcy load part of the pretrained model | 皇后大道中</title>
+<title>Pytorch load part of the pretrained model | 皇后大道中</title>
 <meta name="description" content="皇后大道西">
 
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://fuyunfei.github.io/favicon.ico?v=1590073926444">
+<link rel="shortcut icon" href="https://fuyunfei.github.io/favicon.ico?v=1590075431129">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://fuyunfei.github.io/styles/main.css">
 
@@ -30,7 +30,7 @@
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://fuyunfei.github.io">
-        <img src="https://fuyunfei.github.io/images/avatar.png?v=1590073926444" class="site-logo">
+        <img src="https://fuyunfei.github.io/images/avatar.png?v=1590075431129" class="site-logo">
         <h1 class="site-title">皇后大道中</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -98,21 +98,19 @@
       <div class="main-container">
         <div class="content-container" data-aos="fade-up">
           <div class="post-detail">
-            <h2 class="post-title">Pytorcy load part of the pretrained model</h2>
+            <h2 class="post-title">Pytorch load part of the pretrained model</h2>
             <div class="post-date">2020-05-21</div>
             
             <div class="post-content">
-              <pre><code class="language-python">        
-        ckpt = torch.load(args.resume)
-        pretrained_dict = ckpt['state_dict']
+              <pre><code>pretrained_model = torch.load(args.resume)
+pretrained_dict = pretrained_model['state_dict']
 
-        model_dict=model.state_dict()
-        # 1. filter out unnecessary keys
-        pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
-        # 2. overwrite entries in the existing state dict
-        model_dict.update(pretrained_dict)
-
-        model.load_state_dict(model_dict) 
+model_dict=model.state_dict()
+# 1. filter out unnecessary keys
+pretrained_dict = {k: v for k, v in pretrained_dict.items() if k in model_dict}
+# 2. overwrite entries in the existing state dict
+model_dict.update(pretrained_dict)
+model.load_state_dict(model_dict) 
 </code></pre>
 
             </div>
