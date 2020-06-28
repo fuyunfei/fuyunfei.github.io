@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://fuyunfei.github.io</id>
     <title>皇后大道中</title>
-    <updated>2020-05-21T15:37:13.107Z</updated>
+    <updated>2020-06-28T14:46:24.522Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://fuyunfei.github.io"/>
     <link rel="self" href="https://fuyunfei.github.io/atom.xml"/>
@@ -10,6 +10,23 @@
     <logo>https://fuyunfei.github.io/images/avatar.png</logo>
     <icon>https://fuyunfei.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, 皇后大道中</rights>
+    <entry>
+        <title type="html"><![CDATA[我为何要做AI&ART]]></title>
+        <id>https://fuyunfei.github.io/post/wo-wei-he-yao-zuo-aiandart/</id>
+        <link href="https://fuyunfei.github.io/post/wo-wei-he-yao-zuo-aiandart/">
+        </link>
+        <updated>2020-06-28T14:13:38.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>几千年来， 美和艺术服务于上帝，权贵，而所有人类对美和艺术的有着无限的需求，它们不应当被垄断。</li>
+<li>我希望艺术和美的力量，在新的时代，无距离的打动每一个人。</li>
+<li>我希望美和艺术可以更深入的触碰到每一个人， 无论贫富，地域，和年龄</li>
+<li>我希望每一个个体可以无距离的接触美和艺术，无论贫富，地域，和年龄</li>
+<li>我希望让大众生活的环境拥有更动人，更高级，更多样化的美和设计</li>
+<li>我希望最大限度的解放艺术家和设计师的创造力和生产力。</li>
+<li>我希望更广阔地去探索更多的未知的艺术和美的领域。</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Pytorch load part of the pretrained model]]></title>
         <id>https://fuyunfei.github.io/post/pytorch-jia-zai-xiang-tong-layer/</id>
@@ -1958,38 +1975,6 @@ model.fit(data, target, nb_epoch=100, batch_size=1, \
 verbose=2,validation_data=(x_test, y_test))
 
 predict = model.predict(data)
-</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[Tensor Smoothness ]]></title>
-        <id>https://fuyunfei.github.io/post/how-to-smooth-the-output-image/</id>
-        <link href="https://fuyunfei.github.io/post/how-to-smooth-the-output-image/">
-        </link>
-        <updated>2019-09-29T21:36:48.000Z</updated>
-        <summary type="html"><![CDATA[<p>Total variation loss could be a solution which basically calculate the gradient of the tensor.</p>
-]]></summary>
-        <content type="html"><![CDATA[<p>Total variation loss could be a solution which basically calculate the gradient of the tensor.</p>
-<!-- more -->
-<pre><code class="language-python">    def total_variation(self,x):
-        assert K.ndim(x) == 4
-        if K.image_data_format() == 'channels_first':
-            a = x[:, :, :-1, :- 1] - x[:, :, 1:, :-1]
-            b = x[:, :, :-1, :-1] - x[:, :, :-1, 1:]
-        else:
-            a = x[:, :-1, :-1, :] - x[:, 1:, :-1, :]
-            b = x[:, :-1, :-1, :] - x[:, :- 1, 1:, :]
-        return K.concatenate((a,b))
-
-    def total_variation_loss(self,x):
-        assert K.ndim(x) == 4
-        if K.image_data_format() == 'channels_first':
-            a = K.square(x[:, :, :-1, :- 1] - x[:, :, 1:, :-1])
-            b = K.square(x[:, :, :-1, :-1] - x[:, :, :-1, 1:])
-        else:
-            a = K.square(x[:, :-1, :-1, :] - x[:, 1:, :-1, :])
-            b = K.square( x[:, :-1, :-1, :] - x[:, :- 1, 1:, :])
-        return K.sum(K.pow(a + b, 1.25))
 </code></pre>
 ]]></content>
     </entry>
