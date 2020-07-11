@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>RL 00 | 皇后大道中</title>
+<meta name="description" content="皇后大道西">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://fuyunfei.github.io/favicon.ico?v=1594465054656">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://fuyunfei.github.io/styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://fuyunfei.github.io">
+        <img src="https://fuyunfei.github.io/images/avatar.png?v=1594465054656" class="site-logo">
+        <h1 class="site-title">皇后大道中</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://fuyunfei.github.io" class="site-nav">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            分类
+          </a>
+        
+      
+        
+          <a href="http://yunfei.strikingly.com/" class="site-nav" target="_blank">
+            关于
+          </a>
+        
+      
+        
+          <a href="https://fuyunfei.github.io/tag/u69HSrRbn/" class="site-nav">
+            画架
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      皇后大道西
+    </div>
+    <div class="site-footer">
+       | <a class="rss" href="https://fuyunfei.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">RL 00</h2>
+            <div class="post-date">2020-07-11</div>
+            
+            <div class="post-content">
+              <p><a href="https://www.youtube.com/channel/UC2ggjtuuWvxrHHHiaDH1dlQ/playlists">課程撥放清單</a></p>
+<h2 id=""><a href="#A3C" title="A3C"></a>A3C</h2>
+<p><a href="https://www.youtube.com/watch?v=O79Ic8XBzvw&amp;list=PLJV_el3uVTsPMxPbjeX7PicgWbY7F8wW9&amp;index=23">課程連結</a></p>
+<h3 id="-2"><a href="#Approaches" title="Approaches"></a>Approaches</h3>
+<figure data-type="image" tabindex="1"><img src="https://i.imgur.com/dV9qlUw.png" alt="" loading="lazy"></figure>
+<p>Deep Reinforcement Learning分為兩大類：</p>
+<ol>
+<li>Model-free Approach
+<ul>
+<li>適用於無法窮舉的環境</li>
+<li>兩大類：
+<ul>
+<li>Policy-based
+<ul>
+<li>訓練一個Actor，負責執行動作。</li>
+</ul>
+</li>
+<li>Value-based
+<ul>
+<li>訓練一個Critic，負責對目前的狀況給予評價。</li>
+</ul>
+</li>
+<li>也可以混合使用
+<ul>
+<li>Actor + Critic</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Model-based Approach
+<ul>
+<li>Agent採取一個動作之後會預測接下來發生什麼事。</li>
+<li>AlphaGo內就有使用到Model-based，下一步棋之後計算勝率。</li>
+<li>限制較多，使用之前要對環境先建立模型，因此可以預測環境下一步會發生的事情。
+<ul>
+<li>如果是電玩場景，環境無法窮舉，雖然圍棋的下一步變化多端，但還是可以窮舉。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>目前(2017年)較多使用的是A3C，而不是DQN。</p>
+<h3 id="-3"><a href="#On-policy-vs-Off-policy" title="On-policy-vs-Off-policy"></a>On-policy v.s. Off-policy</h3>
+<figure data-type="image" tabindex="2"><img src="https://i.imgur.com/h8rQnrU.png" alt="" loading="lazy"></figure>
+<p>On-policy，要學習的Agent跟與環境互動的Agent是同一個Agent。</p>
+<p>Off-policy，要學習的Agent跟與環境互動的Agent並不是同一個Agent，意味著要學習的那個Agent是在一邊看著另一個Agent與環境互動，以它們互動的狀況來進行學習。使用這個方法要特別注意兩個Agent之間的差距。好比你看著Joradn空間停留三秒，但是你上場的時候根本學不起來。</p>
+<h3 id="-4"><a href="#Actor-is-a-Neural-network" title="Actor-is-a-Neural-network"></a>Actor is a Neural network</h3>
+<figure data-type="image" tabindex="3"><img src="https://i.imgur.com/Norv406.png" alt="" loading="lazy"></figure>
+<p><a href="https://arxiv.org/abs/1602.01783">論文連結_Asynchronous Methods for Deep Reinforcement Learning</a></p>
+<p>A3C=Asynchronous Advantage Actor-Critic</p>
+<p>Actor是一個Neural Network：</p>
+<ul>
+<li>input：observation，可以是vector，也可以是matrix。</li>
+<li>output：你有那些可以被採取的action</li>
+</ul>
+<p>以遊戲來說明的話，observation就是你看到的遊戲畫面，而output的action就是機器看到observation之後決定的動作，左、右、開火…等，每一個action都會有一個分數，你可以用argmax的方式看那一個機率最高就採用，或者可以用隨機選擇。</p>
+<p>要讓Actor可以採取連續動作也是可行的，所謂的連續動作指的是，假設機器人是一個多軸訊號控制，那你要一次針對多個軸做訊號輸出，假設有十軸，那你的輸出就會是十維的向量。</p>
+<h3 id="-5"><a href="#Actor---Goodness-of-an-Actor" title="Actor---Goodness-of-an-Actor"></a>Actor - Goodness of an Actor</h3>
+<figure data-type="image" tabindex="4"><img src="https://i.imgur.com/IWMZ2wP.png" alt="" loading="lazy"></figure>
+<p>有了Actor，就需要衡量這個Actor有多好。假設每一個Actor就是一個function-π(s)π(s)，上面已經定義它是一個<code>nn</code>，它的參數就是πθπθ。</p>
+<p>接下來我們拿這個Actor去玩遊戲，有了一連串的操作記錄，記錄著state-SS，action-aa，reward-rr。遊戲的總體reward我們寫為R=∑Tt=1rtR=∑t=1Trt，記錄每一個時間點tt的reward。</p>
+<p>即使拿相同的Actor去玩兩次遊戲，結果不一定會是一樣，這有兩個理由：</p>
+<ol>
+<li>有時候Actor可能是隨機性的，即使相同的observation也不一定會有一樣的output。
+<ul>
+<li>上面提到過，我們可以將output視為distribution，再從裡面sample出一個action。</li>
+</ul>
+</li>
+<li>即使Actor看到相同的observation有一樣的action，但是遊戲中的AI也存在著隨機性。</li>
+</ol>
+<p>我們可以定義expected total reward(期望值)為¯RθπR¯θπ，也就是參數為θπθπ的情況下，我們期望得到的reward有多少。</p>
+<p>現在，我們可以拿這個¯RθπR¯θπ來估測Actor有多好。</p>
+<h3 id="-6"><a href="#Actor---Policy-Gradient" title="Actor---Policy-Gradient"></a>Actor - Policy Gradient</h3>
+<figure data-type="image" tabindex="5"><img src="https://i.imgur.com/S9Imy7q.png" alt="" loading="lazy"></figure>
+<p>有了評估Actor的定義，就可以做Policy Gradient，相關推導在之前課程有，可以回頭看。</p>
+<p>直觀說明如下：</p>
+<ul>
+<li>θπ′=θπ+η∇¯Rθπθπ′=θπ+η∇R¯θπ
+<ul>
+<li>η∇¯Rθπη∇R¯θπ：計算θπθπ對expected total reward的gradient，以此更新θπθπ得到θπ′θπ′</li>
+</ul>
+</li>
+<li>∇¯Rθπ≈1N∑Nn=1R(τn)∇logP(τn|θπ)=1N∑Nn=1R(τn)∑Tnt=1∇logp(ant|snt,θπ)=1N∑Nn=1∑Tnt=1R(τn)∇logp(ant|snt,θπ)∇R¯θπ≈1N∑n=1NR(τn)∇log⁡P(τn|θπ)=1N∑n=1NR(τn)∑t=1Tn∇log⁡p(atn|stn,θπ)=1N∑n=1N∑t=1TnR(τn)∇log⁡p(atn|stn,θπ)</li>
+</ul>
+<p>上面做的事簡單的說就是，假設在某次的遊戲記錄τnτn中，Actor看到某一個state-sntstn而執行某一個action-antatn。整個遊戲玩完之後它的reward-R(τn)R(τn)是好的，那機器就會試著去更新參數-θθ讓p(ant|snt)p(atn|stn)出現的機率變大，反之如果最後的reward-R(τn)R(τn)是不好的，那機器就會試著降低p(ant|snt)p(atn|stn)出現的機率。</p>
+<p>要注意到一點是，我們考慮的不是單一個state-action得到的reward，而是整場遊戲所得到的reward。</p>
+<h3 id="-7"><a href="#Critic" title="Critic"></a>Critic</h3>
+<figure data-type="image" tabindex="6"><img src="https://i.imgur.com/5sqnZd8.png" alt="" loading="lazy"></figure>
+<p>Critic本身是不做事，它的角色就是給定一個actor-ππ，然後衡量這個actor有多好或多不好。Critic有很多種，這次課程說明的是State value function-Vπ(s)Vπ(s)：</p>
+<ul>
+<li>給定一個actor-ππ</li>
+<li>看到某一個observation(state)-ss，然後評估接下來一直到遊戲結束，我們會得到的reward有多大。</li>
+<li>這個期望值即為Vπ(s)Vπ(s)，為數值。</li>
+</ul>
+<p>以小蜜蜂之類的遊戲來看，遊戲初始怪物多，那Vπ(s)Vπ(s)所得較大，而後期因為怪物殺的差不多了，因此Vπ(s)Vπ(s)所得會較小。</p>
+<p>從這邊可以發現，State value function是與actor有關，因此定義之前一定要先給定actor。</p>
+<h3 id="-8"><a href="#Critic1" title="Critic1"></a>Critic</h3>
+<figure data-type="image" tabindex="7"><img src="https://i.imgur.com/aDuXlfV.png" alt="" loading="lazy"></figure>
+<p>將阿光想為actor，而佐為是critic，過往阿光較弱的時候下大馬步飛那可能會有較大的機會出錯，因此是不好的，而變強之後的阿光反而應該是走大馬步飛而不是小馬步飛。</p>
+<p>這個案例說明著不同actor即使遇到相同的state也會有不同的結果。</p>
+<h3 id="-9"><a href="#How-to-estimate-Vpis" title="How-to-estimate-Vpis"></a>How to estimate Vπ(s)Vπ(s)</h3>
+<figure data-type="image" tabindex="8"><img src="https://i.imgur.com/07opdIO.png" alt="" loading="lazy"></figure>
+<p>有兩種方式可以評估Vπ(s)Vπ(s)：</p>
+<ol>
+<li>Monte-Carlo
+<ul>
+<li>讓Critic觀察目前的actor-ππ的行為，讓actor-ππ與環境互動，然後統計actor-ππ會得到的reward</li>
+<li>舉例來說，它在看到sasa之後會得到的reward-GaGa，注意到，這邊所統計的reward是一直到遊戲結束的reward總合，這樣子機器才有辦法看的長遠。</li>
+<li>因此，機器要學習的就是當看到sasa的時候，其Vπ(s)Vπ(s)要跟GaGa愈接近愈好。</li>
+</ul>
+</li>
+</ol>
+<h3 id="-10"><a href="#How-to-estimate-Vpis1" title="How-to-estimate-Vpis1"></a>How to estimate Vπ(s)Vπ(s)</h3>
+<figure data-type="image" tabindex="9"><img src="https://i.imgur.com/VZtWq33.png" alt="" loading="lazy"></figure>
+<ol start="2">
+<li>Temporal-difference
+<ul>
+<li>我們只看整個互動的其中一小段，某一個stst採取什麼樣的atat而得到多少的rtrt…</li>
+<li>假設我們已經知道Vπ(st)Vπ(st)，它跟下一個時間點st+1st+1之間差了一個rtrt
+<ul>
+<li>即Vπ(st)+rt=Vπ(st+1)Vπ(st)+rt=Vπ(st+1)</li>
+</ul>
+</li>
+<li>機器要學習的就是，Vπ(st)−Vπ(st+1)Vπ(st)−Vπ(st+1)要愈接近rtrt愈好。</li>
+</ul>
+</li>
+</ol>
+<p>這麼做的理由在於，有些情況下我們無法計算整個過程的reward，好比有一個機器人，它沒有開始與結束，就只有不斷的與環境互動，這種情況之下就無法使用Monte-Carlo來計算，只能取片段來估測而以。</p>
+<h3 id="-11"><a href="#MC-vs-TD" title="MC-vs-TD"></a>MC v.s. TD</h3>
+<figure data-type="image" tabindex="10"><img src="https://i.imgur.com/fdA8E1Q.png" alt="" loading="lazy"></figure>
+<p>MC</p>
+<p>TD</p>
+<p>考慮累計reward-GG</p>
+<p>考慮單一reward-rr</p>
+<p>variance較大</p>
+<p>variance較小</p>
+<p>unbiased</p>
+<p>May be biased</p>
+<p>這非常直觀，如果每一個step的reward都加入一個noise，TD僅考慮一個step，只加一個noise，而MC是考慮整個step，加入的noise自然較大，因此會擁有較大的Variance。</p>
+<h3 id="-12"><a href="#MC-vs-TD1" title="MC-vs-TD1"></a>MC v.s. TD</h3>
+<figure data-type="image" tabindex="11"><img src="https://i.imgur.com/wK2Aq6G.png" alt="" loading="lazy"></figure>
+<p>這邊案例給出兩個不同模式下的差異，假設你是一個critic，你有上表所列的8筆記錄，其中sasa僅出現1次，其reward=0。</p>
+<p>此案例的Vπ(sb)Vπ(sb)很直觀的就是出現8次，其reward為6，期望值為6868，但Vπ(sa)Vπ(sa)就會依你所採用的方式不同而有不同的答案：</p>
+<ul>
+<li>Monte-Carlo：這種情況下，就是統計它的期望值，僅1次且reward=0，因此Vπ(sa)=0Vπ(sa)=0</li>
+<li>Temporal-difference：Vπ(sa)+r=Vπ(sb)Vπ(sa)+r=Vπ(sb)，因此Vπ(sa)=34Vπ(sa)=34</li>
+</ul>
+<p>實際應該取決於你的真實環境，如果sbsb是一個不受sasa干擾的情況，那sb=34sb=34，但如果是會受干擾的話，那除非sbsb是放在互動的開頭那才會有reward。</p>
+<h3 id="-13"><a href="#Actor-Critic" title="Actor-Critic"></a>Actor-Critic</h3>
+<figure data-type="image" tabindex="12"><img src="https://i.imgur.com/cuX2Cka.png" alt="" loading="lazy"></figure>
+<p>現在我們也有Critic，利用Critic來估測Actor：</p>
+<ol>
+<li>你有一個Policy-ππ</li>
+<li>利用ππ與環境互動收集到很多的資料</li>
+<li>選擇利用TD或MC的方式來學到Vπ(s)Vπ(s)</li>
+<li>依據Vπ(s)Vπ(s)來找到新的π′π′</li>
+<li>再利用π′π′與環境互動</li>
+<li>⋮⋮</li>
+</ol>
+<h3 id="-14"><a href="#Advantage-Actor-Critic" title="Advantage-Actor-Critic"></a>Advantage Actor-Critic</h3>
+<figure data-type="image" tabindex="13"><img src="https://i.imgur.com/yJvzmtP.png" alt="" loading="lazy"></figure>
+<p>θπ′=θπ+η∇¯Rθπθπ′=θπ+η∇R¯θπ</p>
+<ul>
+<li>η∇¯Rθπη∇R¯θπ：計算θπθπ對expected total reward的gradient，以此更新θπθπ得到θπ′θπ′</li>
+</ul>
+<p>∇¯Rθπ=1N∑Nn=1∑Tnt=1R(τn)∇logp(ant|snt,θπ)∇R¯θπ=1N∑n=1N∑t=1TnR(τn)∇log⁡p(atn|stn,θπ)</p>
+<ul>
+<li>R(τn)R(τn)：在第nn次的互動中得到多少的reward</li>
+<li>原本是讓Actor自己統計自己在整個互動中得到的reward，現在我們要改成讓Critic來幫忙算
+<ul>
+<li>建議作法：rnt−(Vπ(snt)−Vπ(snt+1))rtn−(Vπ(stn)−Vπ(st+1n))
+<ul>
+<li>這只是A3C論文中的其中一種作法</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>原本Actor是針對整個過程的reward做計算，得到RR，但如果採用A3C的話作法如下：</p>
+<ul>
+<li>rnt−(Vπ(snt)−Vπ(snt+1))rtn−(Vπ(stn)−Vπ(st+1n))
+<ul>
+<li>rntrtn：在state-sntstn的時候採取action-antatn會得到的reward-rntrtn</li>
+<li>(Vπ(snt)−Vπ(snt+1))(Vπ(stn)−Vπ(st+1n))：這個項目是根據critic估測出來的。
+<ul>
+<li>依據目前的Policy-ππ，其Vπ(snt)Vπ(stn)與Vπ(snt+1))Vπ(st+1n))的accumulate value差距有多少</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Advantage Actor-Critic告訴我們的就是，當Advantage function的值是正的，那就要增加採取action-antatn的機率，反之為負則減少。</p>
+<h3 id="-15"><a href="#Advantage-Actor-Critic1" title="Advantage-Actor-Critic1"></a>Advantage Actor-Critic</h3>
+<figure data-type="image" tabindex="14"><img src="https://i.imgur.com/E0yjeJE.png" alt="" loading="lazy"></figure>
+<p>實作中的小技巧：</p>
+<ol>
+<li>critic-Vπ(s)Vπ(s)與actor-π(s)π(s)的參數是可以共享的
+<ul>
+<li>如果是玩遊戲，那輸入的前幾層可能利用CNN，這部份是可以共用的</li>
+</ul>
+</li>
+<li>論文中提到，希望actor output的entropy是大的，以entropy來做正規化
+<ul>
+<li>讓actor output的distribution不要過於集中，而是平滑。這麼做的好處是讓actor在與環境互動的時候能多點探索，過於集中可能就只會回應幾個固定模式。</li>
+</ul>
+</li>
+</ol>
+<h3 id="-16"><a href="#Asynchronous" title="Asynchronous"></a>Asynchronous</h3>
+<figure data-type="image" tabindex="15"><img src="https://i.imgur.com/eZogKsA.png" alt="" loading="lazy"></figure>
+<p><a href="https://medium.com/emergent-future/simple-reinforcement-learning-with-tensorflow-part-8-asynchronous-actor-critic-agents-a3c-c88f72a5e9f2#.68x6na7o9">image source_Simple Reinforcement Learning with Tensorflow Part 8: Asynchronous Actor-Critic Agents (A3C)</a></p>
+<p>Asynchronous的意思指，我們有一個共同參數θ1θ1，然後同時有很多actor(簡報上的Worker)與環境互動，每一個Worker都包含著一個actor與critic：</p>
+<ol>
+<li>首先，Worker先將global parameters-θ1θ1複製過來</li>
+<li>利用複製過來的參數θ1θ1與環境互動</li>
+<li>計算更新actor與critic的參數的梯度</li>
+<li>資訊送回global parameters更新</li>
+</ol>
+<p>這個過程中其它的Worker也同時與環境做互動，其它的Worker也有它們的參數更新回傳至global parameters，因此，也許Worker回傳的global的時候它已經不是原始的θ1θ1而是θ2θ2，雖然這麼聽起來有點怪，但實作上確實可行。這麼做的好處是可以增加訓練的速度。</p>
+<h3 id="-17"><a href="#Pathwise-Derivative-Policy-Gradient" title="Pathwise-Derivative-Policy-Gradient"></a>Pathwise Derivative Policy Gradient</h3>
+<figure data-type="image" tabindex="16"><img src="https://i.imgur.com/r7YViPq.png" alt="" loading="lazy"></figure>
+<p>Pathwise Derivative Policy Gradient與Actor-critic的差異在於，Actor-critic只會回應好壞，但是Pathwise Derivative Policy Gradient是會有建議的。</p>
+<h3 id="-18"><a href="#Anthor-Critic" title="Anthor-Critic"></a>Anthor Critic</h3>
+<figure data-type="image" tabindex="17"><img src="https://i.imgur.com/QZTGiza.png" alt="" loading="lazy"></figure>
+<p>這是一個與上面所介紹Critic不同的function，Qπ(s,a)Qπ(s,a)：</p>
+<ul>
+<li>輸入為state與action的pair</li>
+<li>不同於Vπ(s)Vπ(s)僅考慮state之後計算期望的reward，Qπ(s,a)Qπ(s,a)考慮state與action來計算接下來可能得到的reward</li>
+<li>輸出為scalar，告讓你接下來會得到的reward有多大</li>
+</ul>
+<p>如果你的action可以窮舉的話就可以讓QπQπ的輸入單純的只有state，而輸出的部份就可以帶action，每一個dimension都帶有一個action，每一個action會有多少的reward，但再次的說明，這只針對discrete action可行。</p>
+<h3 id="-19"><a href="#Another-Way-to-use-Critic" title="Another-Way-to-use-Critic"></a>Another Way to use Critic</h3>
+<figure data-type="image" tabindex="18"><img src="https://i.imgur.com/yoghjVy.png" alt="" loading="lazy"></figure>
+<p>假設，Qπ(s,a)Qπ(s,a)的趨勢是如藍線般，很明顯的a1a1能得到的reward是低於a2a2的，這時候機器會讓a1a1出現的機率降低，而讓a2a2的機率增加。</p>
+<p>但這會有一個問題，那就是機器對於沒有sample過的action，機器並不會知道該增加或是減少它出現的機率。圖示來看，紅線所能得到的reward是最好的，但沒有sample到的話，機器並不會知道，而且actor本身是有隨機性的，除了真的取樣取到，否則不會知道。這種問題在action是很大或者是continuous比較常見。</p>
+<p>因此，有一種方法，基本上這個function-Qπ(s,a)Qπ(s,a)是我們所擬合出來的<code>nn</code>，因此我們是知道它的參數，既然知道它的參數那當然知道它的最高點在那。前提是假設這個<code>nn</code>的估測是準的。</p>
+<p>當我們sample到aa的時候，只需要將它向左移得到a′a′，就可以得到較大的reward，而不用苦等某年某月某一天去sample到它，這種方式稱為Q-learning。</p>
+<h3 id="-20"><a href="#Q-Learning" title="Q-Learning"></a>Q-Learning</h3>
+<figure data-type="image" tabindex="19"><img src="https://i.imgur.com/StC38dH.png" alt="" loading="lazy"></figure>
+<p>Q-learning與Actor-Critic類似：</p>
+<ul>
+<li>你有Policy-ππ</li>
+<li>Policy-ππ與環境互動收集很多資料</li>
+<li>利用收集到的資料估測Qπ(s,a)Qπ(s,a)
+<ul>
+<li>這邊我們估測的是QQ而不是VV，因為我們是借由QQ來產生Policy，而不是VV</li>
+</ul>
+</li>
+<li>找一個比ππ還要好的新的π′π′</li>
+</ul>
+<p>註：說Policy的時候就是指Actor</p>
+<h3 id="-21"><a href="#Q-Learning1" title="Q-Learning1"></a>Q-Learning</h3>
+<figure data-type="image" tabindex="20"><img src="https://i.imgur.com/nP12Dvg.png" alt="" loading="lazy"></figure>
+<p>所謂比ππ還要好的π′π′的定義是：</p>
+<ul>
+<li>對於所有的state而言，Vπ′(s)≥Vπ(s)Vπ′(s)≥Vπ(s)
+<ul>
+<li>Vπ(s)Vπ(s)：假設我們現在actor是ππ，在state-ss的時候，我們預期接下來的reward有多少</li>
+<li>Vπ′(s)Vπ′(s)：假設我們現在actor是π′π′，在state-ss的時候，我們預期接下來的reward有多少</li>
+<li>這意昧著不管現在的state是什麼，在actor為π′π′的情況下，它的reward都會比actor-ππ還要大</li>
+</ul>
+</li>
+</ul>
+<p>π′(s)=argmaxQπ(s,a)π′(s)=argmaxQπ(s,a)：</p>
+<ul>
+<li>state為給定，為actor的input</li>
+<li>拿Q-function來看，那一個action可以給Q-function的值最大即為π′π′的Output</li>
+</ul>
+<p>兩點注意：</p>
+<ol>
+<li>π′π′本身沒有參數，參數是在Q-function(本身為<code>nn</code>)，要採取那一個action是由Q-function的參數決定。</li>
+<li>不適用於action性質為continuous的情況，如果是連續函數，那代表我們需要用gradient ascent來求出最大值，每次都要計算一次，曠日費時。(後續說明)</li>
+</ol>
+<h3 id="-22"><a href="#Q-Learning2" title="Q-Learning2"></a>Q-Learning</h3>
+<figure data-type="image" tabindex="21"><img src="https://i.imgur.com/G2edrbf.png" alt="" loading="lazy"></figure>
+<p>現在要證明π′(s)=argmaxQπ(s,a)π′(s)=argmaxQπ(s,a)可以滿足Vπ′(s)≥Vπ(s)Vπ′(s)≥Vπ(s) for all state-ss這件事是對的：</p>
+<ul>
+<li>Vπ(s)=Qπ(s,π(s))Vπ(s)=Qπ(s,π(s))
+<ul>
+<li>Vπ(s)Vπ(s)：在state-ss，用actor-ππ與環境互動期望得到的reward</li>
+<li>Qπ(s,π(s))Qπ(s,π(s))：在state-ss採取action-π(s)π(s)會得到的reward，如果actor為ππ，那它採取的action就是π(s)π(s)</li>
+</ul>
+</li>
+<li>Vπ(s)=Qπ(s,π(s))≤maxaQπ(s,a)Vπ(s)=Qπ(s,π(s))≤maxaQπ(s,a)
+<ul>
+<li>Q-function不變情況下，窮舉所有可能的action-aa帶入Qπ(s,a)Qπ(s,a)。很明顯的，maxQπ(s,a)maxQπ(s,a)是一個upper bound。</li>
+</ul>
+</li>
+<li>Vπ(s)=Qπ(s,π(s))≤maxaQπ(s,a)=Qπ(s,π′(s))Vπ(s)=Qπ(s,π(s))≤maxaQπ(s,a)=Qπ(s,π′(s))
+<ul>
+<li>那一個actor會採取一個讓Qπ(s,a)Qπ(s,a)的值最大，那它就是π′π′，即Qπ(s,π′(s))Qπ(s,π′(s))</li>
+<li>直觀來看就是，在state-ss，用π(s)π(s)這個action來與環境互動，剩下的都用ππ與環境互動，其所得的reward會比沒有使用action-π′(s)π′(s)還要大。</li>
+</ul>
+</li>
+</ul>
+<p>將數學式展開：</p>
+<ul>
+<li>Vπ(s)≤Qπ(s,π′(s))Vπ(s)≤Qπ(s,π′(s))
+<ul>
+<li>=Eπ′[rt+1+Vπ(st+1)|st=s]=Eπ′[rt+1+Vπ(st+1)|st=s]
+<ul>
+<li>假設s=sts=st，QQ就等於rt+1+Vπ(st+1)rt+1+Vπ(st+1)</li>
+</ul>
+</li>
+<li>≤Eπ′[rt+1+Qπ(st+1,π′(st+1))|st=s]≤Eπ′[rt+1+Qπ(st+1,π′(st+1))|st=s]
+<ul>
+<li>帶入上面推導出來的upper bound</li>
+</ul>
+</li>
+<li>=Eπ′[rt+1+rt+2+Vπ(st+2)|st=s]=Eπ′[rt+1+rt+2+Vπ(st+2)|st=s]</li>
+<li>≤Eπ′[rt+1+rt+2+Qπ(st+2,π′(st+2))|st=s]≤Eπ′[rt+1+rt+2+Qπ(st+2,π′(st+2))|st=s]</li>
+<li>⋯≤Vπ′(s)⋯≤Vπ′(s)</li>
+</ul>
+</li>
+</ul>
+<p>假如給我們一個Actor-ππ，我們可以計算出它的Q-function，那我們就可以找到另外一個π′π′，它比原來的ππ還要更好。還要更好所指的就是Vπ(s)≤Vπ′(s)Vπ(s)≤Vπ′(s)。</p>
+<h3 id="-23"><a href="#Estimate-Qpisa-by-TD" title="Estimate-Qpisa-by-TD"></a>Estimate Qπ(s,a)byTDQπ(s,a)byTD</h3>
+<figure data-type="image" tabindex="22"><img src="https://i.imgur.com/A9hFcVI.png" alt="" loading="lazy"></figure>
+<p>找QQ可以用MC，也可以用TD。</p>
+<p>假設現在的序列為st,at,rt,st+1st,at,rt,st+1：</p>
+<ul>
+<li>我們可以計算出Qπ(st,at)Qπ(st,at)</li>
+<li>只知道st+1st+1，但不知道機器會採取那一個action-at+1at+1，但我們可以預期機器會採取的action-π(st+1)π(st+1)</li>
+<li>兩個時步中間會有一個差距，即rtrt</li>
+<li>利用Gradient descent來求解
+<ul>
+<li>Qπ(st,at)Qπ(st,at)與rt+Qπ(st+1,π(st+1))rt+Qπ(st+1,π(st+1))愈接近愈好</li>
+</ul>
+</li>
+</ul>
+<p>實作上這兩個Q是相同的function，相同的參數，如果同時訓練會讓結果較不穩定，因此訓練的時候會將其中一個凍結，視為target，讓沒凍結的那個Q-function去擬合另一個已凍結的Q的Output，幾次迭代之後再將參數copy給另一個凍結的Q。</p>
+<h3 id="-24"><a href="#Double-DQN" title="Double-DQN"></a>Double DQN</h3>
+<figure data-type="image" tabindex="23"><img src="https://i.imgur.com/W7KvTzz.png" alt="" loading="lazy"></figure>
+<p>實作Q-learning的時候很容易高估Q值，假設有四個action，其Q(st+1,a)Q(st+1,a)如下圖：<br>
+<img src="https://i.imgur.com/1ZRBlZK.png" alt="" loading="lazy"></p>
+<p>因為Q(st+1,a)Q(st+1,a)是估測出來的值，因此可能存在誤差，其誤差值有大有小，有正有負，而我們每次選擇都會選擇最大的那個：<br>
+<img src="https://i.imgur.com/rO6DdUR.png" alt="" loading="lazy"></p>
+<p>我們就發現到，當Q值有誤差的時候，我們通常都會選到高估的那個action，這時候訓練出來的結果也會是高估的。</p>
+<h3 id="-25"><a href="#Double-DQN1" title="Double-DQN1"></a>Double DQN</h3>
+<figure data-type="image" tabindex="24"><img src="https://i.imgur.com/y94N0dZ.png" alt="" loading="lazy"></figure>
+<p><a href="https://papers.nips.cc/paper/3964-double-q-learning">論文連結_Double Q-learning</a><br>
+<a href="https://arxiv.org/abs/1509.06461?context=cs">論文連結_Deep Reinforcement Learning with Double Q-learning</a><br>
+對於這種高估的問題有一種處理技巧-Doule DQN，這個技巧需要兩個Q-function，QQ與Q′Q′：</p>
+<ul>
+<li>一個計算Q value(Q′Q′)，一個決定採取那一個action(QQ)
+<ul>
+<li>原始作法是用同一個Q-function來決定action，以及估測reward期望值</li>
+</ul>
+</li>
+</ul>
+<p>直觀來看，如果Q-value被高估，那代表QQ選出來的action是被估高的，但只要Q′Q′沒有高估QQ選出來的action就可以了。即使Q′Q′高估某一個action，但只要QQ沒有選到那個action就沒事了，兩者互相制衡。</p>
+<h3 id="-26"><a href="#Dueling-DQN" title="Dueling-DQN"></a>Dueling DQN</h3>
+<figure data-type="image" tabindex="25"><img src="https://i.imgur.com/HMVWP1g.png" alt="" loading="lazy"></figure>
+<p><a href="http://proceedings.mlr.press/v48/wangf16.pdf">論文連結_Dueling Network Architectures for Deep Reinforcement Learning</a></p>
+<p>Dueling是決鬥的意思，與原始DQN的差異僅在Output前：</p>
+<ul>
+<li>最後的Output之前會分叉會兩條路，其中一條只會Output一個value-V(s)V(s)，另一條會Output一個Vector-AA，其維度與最終輸出的action-aa一致，而A(s,a)+V(s)=Q(s,a)A(s,a)+V(s)=Q(s,a)。
+<ul>
+<li>論文中對於實作有另外的技巧避免V(s)=0V(s)=0，這部份有興趣的話可以直接閱讀論文。</li>
+<li>A(s,a)A(s,a)：在state-ss採取action-aa，它比原來的Policy還要好多少。</li>
+</ul>
+</li>
+</ul>
+<p>Dueling DQN實作上比DQN的效果還要好，其中一點有趣的是它的可視化，它可以計算如何改變輸入(image)對V(s)V(s)以及A(s,a)A(s,a)的影響最大，這樣就可以看的出什麼樣的事情是與action有關，而什麼是無關的。</p>
+<h3 id="-27"><a href="#Dueling-DQN---Visualization" title="Dueling-DQN---Visualization"></a>Dueling DQN - Visualization</h3>
+<figure data-type="image" tabindex="26"><img src="https://i.imgur.com/Wo9Xmho.png" alt="" loading="lazy"></figure>
+<p><a href="https://www.youtube.com/playlist?list=PLVFXyCSfS2Pau0gBh0mwTxDmutywWyFBP">論文影片連結</a></p>
+<p>影片可以看的到，左邊會一直有紅色的閃光出來，這意味著這邊的pixel改變的時候對V(s)=0V(s)=0的影響最大。而右邊是顯示對A(s,a)A(s,a)(Advantage-function)影響最大的改變。</p>
+<p>可以看的到，Advantage-function在車子出現在眼前的時候才會紅，因為車子靠近之後採取不同的action才會對結果有影響。但左邊的Value是每通過一輛車就會紅，它跟有沒有車有關，只要地平線的那端出現車子就會紅。</p>
+<p>另一段打磚塊遊戲也是一樣的道理，左邊Value幾乎都有值，而接近下面的時候Advantage-function才會紅。</p>
+<h3 id="-28"><a href="#Pathwise-Derivative-Policy-Gradient1" title="Pathwise-Derivative-Policy-Gradient1"></a>Pathwise Derivative Policy Gradient</h3>
+<figure data-type="image" tabindex="27"><img src="https://i.imgur.com/8QmQkqk.png" alt="" loading="lazy"></figure>
+<p>稍早的Q-learning中提到，只要有QQ，我們就找的到π′π′，不需要任何的actor。但如果現在我們有一個actor，而它的output就是我們要採取的action-aa，那是什麼情況?</p>
+<p>假設我們有一個actor-ππ，input-ss，output-aa，然後要更新ππ為π′π′，而且我們希望Qπ(s,a)Qπ(s,a)的值愈大愈好。</p>
+<p>實務上，如下圖所示，我們可以將整個串接起來視為一個較大的神經網路即可：<br>
+<img src="https://i.imgur.com/mZkwFjv.png" alt="" loading="lazy"></p>
+<p>當我們在更新actor的時候，就將QπQπ的參數固定住，再用Gradient Ascent來更新actor的參數：</p>
+<ul>
+<li>θπ′←θπ+η∇θπQπ(s,a)θπ′←θπ+η∇θπQπ(s,a)
+<ul>
+<li>計算θπθπ對Q-function的梯度再加上θπθπ得到θπ′θπ′</li>
+</ul>
+</li>
+</ul>
+<p>整個架構看起來跟GAN非常類似，但這種作法稱為Pathwise Derivative Policy Gradient</p>
+<h3 id="-29"><a href="#Pathwise-Derivative-Policy-Gradient2" title="Pathwise-Derivative-Policy-Gradient2"></a>Pathwise Derivative Policy Gradient</h3>
+<figure data-type="image" tabindex="28"><img src="https://i.imgur.com/DXy29Jb.png" alt="" loading="lazy"></figure>
+<p>與Q-Learning一樣有三步驟，在估測Q-function的時候與一般的DQN是一樣的，不同的地方是在估測π′π′的部份。原始DQN中只需要有Q-function就夠，但在Pathwise Derivative Policy Gradient中是需要一個actor(<code>nn</code>)來得到action，然後透過調整actor的參數讓Q-function的Output愈大愈好。</p>
+<p>這種情況下即使action是連續的也沒有關係，因為在testing的時候我們並不需要解一個argmaxargmax的問題，這部份是在training的時候處理掉了，testing的時候只需要input state就可以。</p>
+<p>有一個通用的小技巧，就是Replay Buffer。意思是將過去與環境互動的所有資訊通通存下來放到一個Buffer內，訓練Q-function過程中再從這個Buffer中取值出來，並不單純只取ππ與環境互動的經驗，還會包含過去其它的actor與環境互動的經驗也都在裡面，這樣訓練過程會比較穩定。</p>
+<p>另外一個小技巧，就是對actor的output加上noise，這可以幫助actor探索不同的環境。</p>
+<h3 id="-30"><a href="#DDPG-Alogrithm" title="DDPG-Alogrithm"></a>DDPG Alogrithm</h3>
+<figure data-type="image" tabindex="29"><img src="https://i.imgur.com/lACJ0W2.png" alt="" loading="lazy"></figure>
+<p>DDPG=Deep Deterministic Policy Gradient</p>
+<p>DDPG也是我們稍早所提到的Pathwise Derivative Policy Gradient的其中一種方式：</p>
+<ul>
+<li>有一個actor與critic，其初始化參數分別為critic-θQθQ與actor-θπθπ</li>
+<li>有一個target critic-θQ′θQ′與有一個target actor-θπ′θπ′
+<ul>
+<li>這是估測Q-function的時候用的</li>
+</ul>
+</li>
+<li>初始化一個replay buffer R</li>
+<li>每次的迭代
+<ul>
+<li>用actor-ππ與環境互動，input-s，output-a，即π(s)π(s)，再針對Output加上noise，即π(s)π(s) + noise來幫助actor探索環境，並收集一堆訓練資料，將它們存放到Reply buffer-R。
+<ul>
+<li>訓練資料結構為{st,at,rt,st+1}{st,at,rt,st+1}</li>
+</ul>
+</li>
+<li>從Reply buffer-R中sample出N筆資料</li>
+<li>利用取出的N筆資料訓練critic-Q
+<ul>
+<li>調整Q的參數讓它與目標函數L=∑n(<sup>yn−Q(sn,an))2L=∑n(y</sup>n−Q(sn,an))2愈接近愈好
+<ul>
+<li>target-<sup>yn=rn+Q′(sn+1,π′(sn+1))y</sup>n=rn+Q′(sn+1,π′(sn+1))
+<ul>
+<li>以target actor-θπ′θπ′根據sn+1sn+1決定要採取什麼樣的action，得到Q′Q′之後加上rnrn</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>更新actor-ππ的參數，讓Q-function的值增加</li>
+<li>更新target network
+<ul>
+<li>θπ′←mθπ+(1−m)θπ′θπ′←mθπ+(1−m)θπ′</li>
+<li>θQ′←mθQ+(1−m)θQ′θQ′←mθQ+(1−m)θQ′</li>
+<li>理論上可以直接讓θπ=θπ′,θQ′=θQθπ=θπ′,θQ′=θQ，但實務上我們會讓target networks乘上一個weight再與critic、actor做計算。
+<ul>
+<li>這麼做的好處是，target networks的變化會比較慢，訓練上也會比較穩定。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://fuyunfei.github.io/tag/9IGeoN4JE/" class="tag">
+                    Reinforcement Learning
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://fuyunfei.github.io/post/wo-wei-he-yao-zuo-aiandart/">
+                  <h3 class="post-title">
+                    我为何要做AI&amp;ART
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+<script type="application/javascript">
+
+AOS.init();
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
